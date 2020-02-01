@@ -11,7 +11,7 @@ SRC_URI="http://www.rncbc.org/archive/${P}.tar.gz"
 #https://www.dropbox.com/s/vf7wn0hai3ok7ho/rtirq-20180209.tar.gz
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~arm64"
+KEYWORDS="~amd64 ~x86 ~arm64 ~arm"
 
 src_prepare() {
         get_version
