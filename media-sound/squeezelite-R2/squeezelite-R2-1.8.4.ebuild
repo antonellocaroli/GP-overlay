@@ -14,7 +14,7 @@ SRC_URI="https://github.com/marcoc1712/${PN}/archive/v${PV}-(R2).tar.gz -> ${P}.
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~arm64 ~arm"
 IUSE="dsd resample visexport ffmpeg lirc systemd"
 
 DEPEND="media-libs/alsa-lib
