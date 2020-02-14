@@ -27,7 +27,10 @@ RDEPEND=">=dev-libs/glib-2.37.3
 	>=media-libs/alsa-lib-1.0.16
 	>=media-libs/flac-1.3.0
 	>=media-libs/libogg-1.3.3
-	>=net-misc/rygel-0.34.0"
+	>=net-misc/rygel-0.34.0
+	>=sys-libs/libomp-7.1.0
+  >=net-libs/gupnp-1.0.4
+  >=net-libs/gupnp-av-0.12.11"
 
 DEPEND="${RDEPEND}"
 
@@ -49,6 +52,7 @@ src_unpack() {
 src_install() {
 	mv etc lib usr var "${D}" || die
 	rm "${D}usr/share/doc/hqplayerd/changelog.Debian.gz"
+	dosym "${ED%/}"/usr/lib64/libomp.so /usr/lib64/libomp.so.5
 	if use systemd; then
 		systemd_dounit "${FILESDIR}/${MY_PN}.service"
 	else
