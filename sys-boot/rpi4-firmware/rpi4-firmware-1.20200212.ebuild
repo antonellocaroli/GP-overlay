@@ -20,7 +20,8 @@ DEPEND=""
 RDEPEND="
 	${DEPEND}"
 
-S="${WORKDIR}/rpi4-firmware-${DOWNLOAD_PV}"
+#S="${WORKDIR}/rpi4-firmware-${DOWNLOAD_PV}"
+S="${WORKDIR}"
 
 pkg_preinst() {
 	if ! grep "${ROOT%/}/boot" /proc/mounts >/dev/null 2>&1; then
