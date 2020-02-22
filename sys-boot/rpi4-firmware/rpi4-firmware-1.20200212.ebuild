@@ -24,6 +24,7 @@ RDEPEND="
 S="${WORKDIR}"
 
 pkg_preinst() {
+	mount /boot
 	if ! grep "${ROOT%/}/boot" /proc/mounts >/dev/null 2>&1; then
 		ewarn "${ROOT%/}/boot is not mounted, the files might not be installed at the right place"
 	fi
