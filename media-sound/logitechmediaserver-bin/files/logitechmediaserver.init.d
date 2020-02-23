@@ -17,6 +17,7 @@ lmsbin=${optdir}/slimserver.pl
 
 depend() {
 	need net
+	after bootmisc sshd
 }
 
 start_pre() {
