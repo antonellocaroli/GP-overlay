@@ -13,7 +13,7 @@ EGIT_COMMIT="d65b8e86e3048181d7c002bada4d879ee49f3f84"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~arm64"
 IUSE=""
 
 DEPEND="dev-libs/openssl
