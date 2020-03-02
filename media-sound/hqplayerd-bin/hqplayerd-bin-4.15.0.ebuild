@@ -55,7 +55,7 @@ src_unpack() {
 
 src_prepare() {
      default
-     patchelf --replace-needed libomp.so.5 libomp.so "${D}usr/bin/hqplayerd" || die
+     patchelf --replace-needed libomp.so.5 libomp.so usr/bin/hqplayerd || die
 }
 
 src_install() {
