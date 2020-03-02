@@ -31,11 +31,12 @@ RDEPEND=">=dev-libs/glib-2.37.3
 	>=sys-libs/libomp-7.1.0
   >=net-libs/gupnp-1.0.4
   >=net-libs/gupnp-av-0.12.11
-	>=dev-libs/libgee-0.20.2"
+	>=dev-libs/libgee-0.20.2
+	>=dev-util/patchelf-0.10"
 
 DEPEND="${RDEPEND}"
 
-BDEPEND=">=dev-util/patchelf-0.10"
+#BDEPEND=">=dev-util/patchelf-0.10"
 
 S="${WORKDIR}"
 QA_PREBUILT="usr/bin/hqplayerd"
