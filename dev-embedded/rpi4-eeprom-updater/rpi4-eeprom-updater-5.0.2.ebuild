@@ -46,6 +46,7 @@ src_install() {
 
 pkg_postinst() {
 	if [[ -z ${REPLACING_VERSIONS} ]]; then
+		rc-update del "${PN}" default
 		elog "The ${PN} service has been added to your default runlevel."
 		elog "Please check /etc/default/rpi-eeprom-update for settings."
 	fi
