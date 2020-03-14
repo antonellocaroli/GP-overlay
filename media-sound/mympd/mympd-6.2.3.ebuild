@@ -31,5 +31,6 @@ src_compile() {
 }
 
 src_install() {
+	cd release
   make install DESTDIR="$DESTDIR"
 }
