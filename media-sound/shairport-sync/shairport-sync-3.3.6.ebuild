@@ -23,11 +23,18 @@ BDEPEND=""
 
 S="${WORKDIR}/${MY_PN}-${PV}"
 
+pkg_setup() {
+	enewuser shairport-sync -1 -1 -1 audio
+}
+
 src_compile() {
         default
         autoreconf -fi
 				./configure --sysconfdir=/etc --with-alsa --with-soxr --with-avahi --with-ssl=openssl --with-libdaemon
 				make
-				emake DESTDIR="${D}" install
-				newinitd "${FILESDIR}"/${MY_PN}.initd ${MY_PN}
+}
+
+src_install() {
+	emake DESTDIR="${D}" install
+	newinitd "${FILESDIR}"/${MY_PN}.initd ${MY_PN}
 }
