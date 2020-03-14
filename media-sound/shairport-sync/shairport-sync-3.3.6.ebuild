@@ -16,10 +16,14 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~arm ~arm64"
 IUSE=""
+#media-libs/libao
 
-DEPEND=""
-RDEPEND="${DEPEND}"
-BDEPEND=""
+DEPEND="dev-libs/openssl
+	media-libs/soxr
+	dev-libs/libconfig
+	dev-libs/libdaemon"
+RDEPEND="${DEPEND}
+	net-dns/avahi"
 
 S="${WORKDIR}/${MY_PN}-${PV}"
 
