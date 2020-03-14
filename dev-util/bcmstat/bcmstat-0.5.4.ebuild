@@ -1,7 +1,7 @@
 EAPI=6
 inherit
 
-
+MY_PN="bcmstat"
 DESCRIPTION="music player"
 HOMEPAGE="https://roonlabs.com/index.html"
 SRC_URI="https://github.com/MilhouseVH/bcmstat/archive/${PV}.tar.gz"
@@ -15,7 +15,8 @@ KEYWORDS="~arm ~arm64"
 
 DEPEND=""
 
-S="${WORKDIR}"
+#S="${WORKDIR}"
+S="${WORKDIR}/${MY_PN}-${PV}"
 
 
 
