@@ -3,7 +3,7 @@
 
 EAPI=6
 
-inherit
+inherit git-r3
 
 DESCRIPTION="uhubctl is utility to control USB power per-port on smart USB hubs"
 HOMEPAGE="https://github.com/mvp/uhubctl"
