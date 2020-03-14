@@ -3,7 +3,7 @@
 
 EAPI=6
 
-inherit
+inherit eutils user
 
 MY_PN="shairport-sync"
 
