@@ -22,7 +22,7 @@ S="${WORKDIR}"
 
 
 src_install() {
-   dobin bcmstat-0.5.4/bcmstat.sh
+   dobin ${MY_PN}-${PV}/bcmstat.sh
 }
 
 #pkg_postinst()
