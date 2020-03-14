@@ -21,9 +21,9 @@ IUSE="convolution"
 DEPEND="dev-libs/openssl
 	media-libs/soxr
 	dev-libs/libconfig
-	dev-libs/libdaemon
-	convolution? (media-libs/libsndfile)"
+	dev-libs/libdaemon"
 RDEPEND="${DEPEND}
+  convolution? (media-libs/libsndfile)
 	net-dns/avahi"
 
 S="${WORKDIR}/${MY_PN}-${PV}"
