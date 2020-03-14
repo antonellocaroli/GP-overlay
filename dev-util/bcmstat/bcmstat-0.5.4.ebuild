@@ -26,6 +26,5 @@ src_install() {
 
 pkg_postinst()
 {
-        chmod +x /opt/palemoon/palemoon-bin /opt/palemoon/palemoon
-        ln -s /opt/palemoon/palemoon-bin /usr/bin/palemoon-bin
+        chmod +x /usr/bin/bcmstat.sh
 }
