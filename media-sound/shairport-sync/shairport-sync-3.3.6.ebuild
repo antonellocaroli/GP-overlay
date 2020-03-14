@@ -21,7 +21,8 @@ IUSE=""
 DEPEND="dev-libs/openssl
 	media-libs/soxr
 	dev-libs/libconfig
-	dev-libs/libdaemon"
+	dev-libs/libdaemon
+	convolution? ( media-libs/libsndfile )"
 RDEPEND="${DEPEND}
 	net-dns/avahi"
 
@@ -34,7 +35,11 @@ pkg_setup() {
 src_compile() {
         default
         autoreconf -fi
-				./configure --sysconfdir=/etc --with-alsa --with-soxr --with-avahi --with-ssl=openssl --with-libdaemon
+				if ! use convolution; then
+					./configure --sysconfdir=/etc --with-alsa --with-soxr --with-avahi --with-ssl=openssl --with-libdaemon --with-convolution
+				else
+				  ./configure --sysconfdir=/etc --with-alsa --with-soxr --with-avahi --with-ssl=openssl --with-libdaemon
+				fi
 				make
 }
 
