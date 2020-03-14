@@ -26,6 +26,6 @@ src_install() {
 }
 
 #pkg_postinst()
-#{
+##{
 #        chmod +x /usr/bin/bcmstat.sh
 #}
