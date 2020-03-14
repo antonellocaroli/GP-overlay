@@ -29,5 +29,5 @@ make
 }
 
 src_install() {
-  dobin ${MY_PN}-${PV}/${MY_PN}
+  dobin ${PN}-${PV}/${PN}
 }
