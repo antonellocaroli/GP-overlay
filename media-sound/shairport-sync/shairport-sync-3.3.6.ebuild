@@ -35,7 +35,7 @@ pkg_setup() {
 src_compile() {
         default
         autoreconf -fi
-				if ! use convolution; then
+				if use convolution; then
 					./configure --sysconfdir=/etc --with-alsa --with-soxr --with-avahi --with-ssl=openssl --with-libdaemon --with-convolution
 				else
 				  ./configure --sysconfdir=/etc --with-alsa --with-soxr --with-avahi --with-ssl=openssl --with-libdaemon
