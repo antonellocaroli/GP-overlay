@@ -21,7 +21,7 @@ S="${WORKDIR}"
 
 
 src_install() {
-   cp -R "bcmstat.sh" "${D}/usr/bin/" || die "Install failed!"
+   cp -R "${D}/bcmstat.sh" "${D}/usr/bin/" || die "Install failed!"
 }
 
 pkg_postinst()
