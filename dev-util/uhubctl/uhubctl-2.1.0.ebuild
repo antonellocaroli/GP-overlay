@@ -29,5 +29,5 @@ make
 }
 
 src_install() {
-  dobin ${PN}-${PV}/${PN}
+  dobin uhubctl
 }
