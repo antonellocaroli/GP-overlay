@@ -15,14 +15,14 @@ KEYWORDS="~arm ~arm64"
 
 DEPEND=""
 
-#S="${WORKDIR}"
-S="${WORKDIR}/${MY_PN}-${PV}"
+S="${WORKDIR}"
+#S="${WORKDIR}/${MY_PN}-${PV}"
 
 
 
 
 src_install() {
-   cp -R "${D}bcmstat.sh" "${D}/usr/bin/" || die "Install failed!"
+   cp -R "${D}/bcmstat.sh" "/usr/bin/" || die "Install failed!"
 }
 
 pkg_postinst()
