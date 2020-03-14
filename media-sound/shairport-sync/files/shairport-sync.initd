@@ -4,7 +4,7 @@
 user="shairport-sync:shairport-sync"
 
 description="emulates an AirPort Express to stream music from i-devices"
-#start_stop_daemon_args="--user $user"
+start_stop_daemon_args="--user $user"
 
 command="/usr/local/bin/shairport-sync"
 #command_args="
