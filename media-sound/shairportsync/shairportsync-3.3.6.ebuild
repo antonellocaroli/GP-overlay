@@ -5,7 +5,7 @@ EAPI=7
 
 inherit cmake-utils
 
-MY_PN="myMPD"
+MY_PN="shairport-sync"
 
 DESCRIPTION="myMPD is a standalone and mobile friendly web mpdclient"
 HOMEPAGE="https://github.com/mikebrady/shairport-sync"
