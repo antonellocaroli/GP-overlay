@@ -15,7 +15,7 @@ SRC_URI="https://github.com/mikebrady/shairport-sync/archive/${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~arm ~arm64"
-IUSE=""
+IUSE="convolution"
 #media-libs/libao
 
 DEPEND="dev-libs/openssl
