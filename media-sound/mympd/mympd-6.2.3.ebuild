@@ -31,5 +31,5 @@ src_compile() {
 }
 
 src_install() {
-  ./build.sh install
+  make install DESTDIR="$DESTDIR"
 }
