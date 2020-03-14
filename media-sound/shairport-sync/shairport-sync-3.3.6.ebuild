@@ -29,4 +29,5 @@ src_compile() {
 				./configure --sysconfdir=/etc --with-alsa --with-soxr --with-avahi --with-ssl=openssl --with-libdaemon
 				make
 				emake DESTDIR="${D}" install
+				newinitd "${FILESDIR}"/${MY_PN}.initd ${MY_PN}
 }
