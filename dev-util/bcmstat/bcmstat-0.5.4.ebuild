@@ -21,7 +21,11 @@ S="${WORKDIR}"
 
 
 src_install() {
-  insinto "/usr/bin/"
-  insopts -m755
-  doins -r bcmstat.sh
+   cp -R "bcmstat.sh" "${D}/usr/bin/" || die "Install failed!"
+}
+
+pkg_postinst()
+{
+        chmod +x /opt/palemoon/palemoon-bin /opt/palemoon/palemoon
+        ln -s /opt/palemoon/palemoon-bin /usr/bin/palemoon-bin
 }
