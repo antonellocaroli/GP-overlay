@@ -1,7 +1,7 @@
 #!/sbin/openrc-run
 
 
-user="shairport-sync:shairport-sync"
+user="shairport-sync"
 
 description="emulates an AirPort Express to stream music from i-devices"
 start_stop_daemon_args="--user $user"
