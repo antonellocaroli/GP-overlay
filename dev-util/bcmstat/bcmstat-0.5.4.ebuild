@@ -22,10 +22,10 @@ S="${WORKDIR}"
 
 
 src_install() {
-   cp "bcmstat.sh" "/usr/bin/" || die "Install failed!"
+   dobin bcmstat.sh
 }
 
-pkg_postinst()
-{
-        chmod +x /usr/bin/bcmstat.sh
-}
+#pkg_postinst()
+#{
+#        chmod +x /usr/bin/bcmstat.sh
+#}
