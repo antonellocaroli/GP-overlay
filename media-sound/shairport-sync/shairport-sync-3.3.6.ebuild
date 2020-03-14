@@ -15,13 +15,14 @@ SRC_URI="https://github.com/mikebrady/shairport-sync/archive/${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~arm ~arm64"
-IUSE=""
+IUSE="convolution"
 #media-libs/libao
 
 DEPEND="dev-libs/openssl
 	media-libs/soxr
 	dev-libs/libconfig
-	dev-libs/libdaemon"
+	dev-libs/libdaemon
+	convolution? (media-libs/libsndfile)"
 RDEPEND="${DEPEND}
 	net-dns/avahi"
 
@@ -34,7 +35,11 @@ pkg_setup() {
 src_compile() {
         default
         autoreconf -fi
-				./configure --sysconfdir=/etc --with-alsa --with-soxr --with-avahi --with-ssl=openssl --with-libdaemon
+				if ! use convolution; then
+					./configure --sysconfdir=/etc --with-alsa --with-soxr --with-avahi --with-ssl=openssl --with-libdaemon --with-convolution
+				else
+				  ./configure --sysconfdir=/etc --with-alsa --with-soxr --with-avahi --with-ssl=openssl --with-libdaemon
+				fi
 				make
 }
 
