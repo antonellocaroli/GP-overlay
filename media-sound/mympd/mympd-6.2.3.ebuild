@@ -26,20 +26,20 @@ BDEPEND=""
 S="${WORKDIR}/${MY_PN}-${PV}"
 
 pkg_setup() {
-  enewgroup mympd
-	enewuser mympd -1 -1 -1 audio
+    enewgroup mympd
+    enewuser mympd -1 -1 -1 audio
 }
 
 src_compile() {
-        default
-        ./build.sh release
+    default
+    ./build.sh release
 }
 
 src_install() {
-	cd release
-  dobin mympd
-  dobin cli_tools/mympd-config
-  newinitd "${FILESDIR}/${PN}.init.d" "${PN}"
-  insinto /etc
-  newins "${FILESDIR}/${PN}.conf" "${PN}.conf"
+    cd release
+    dobin mympd
+    dobin cli_tools/mympd-config
+    newinitd "${FILESDIR}/${PN}.init.d" "${PN}"
+    insinto /etc
+    newins "${FILESDIR}/${PN}.conf" "${PN}.conf"
 }
