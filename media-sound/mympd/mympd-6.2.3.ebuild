@@ -25,6 +25,10 @@ BDEPEND=""
 
 S="${WORKDIR}/${MY_PN}-${PV}"
 
+pkg_setup() {
+	enewuser mympd -1 -1 -1 audio
+}
+
 src_compile() {
         default
         ./build.sh release
