@@ -1,6 +1,6 @@
 #!/sbin/openrc-run
 
-user="mympd:mympd"
+user="root:root"
 logfile="/var/log/mympd.log"
 
 start_stop_daemon_args="--user $user"
