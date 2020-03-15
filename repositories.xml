@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<repositories version="1.0">
+    <repo priority="150" quality="experimental" status="unofficial">
+        <name>GP-overlay</name>
+        <description lang="en">antonellocaroli's GP-overlay</description>
+        <homepage>https://github.com/antonellocaroli/GP-overlay.git</homepage>
+        <owner>
+            <name>antonellocaroli</name>
+            <email>antonellocaroli@gmail.com</email>
+        </owner>
+        <source type="git">https://github.com/antonellocaroli/GP-overlay.git</source>
+        <feed>https://github.com/antonellocaroli/GP-overlay/commits/master.atom</feed>
+    </repo>
+</repositories>
