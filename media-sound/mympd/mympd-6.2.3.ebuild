@@ -37,4 +37,5 @@ src_compile() {
 src_install() {
 	cd release
   dobin mypd
+  newinitd "${FILESDIR}/${PN}.init.d" "${PN}"
 }
