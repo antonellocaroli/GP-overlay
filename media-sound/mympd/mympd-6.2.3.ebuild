@@ -27,6 +27,7 @@ S="${WORKDIR}/${MY_PN}-${PV}"
 
 pkg_setup() {
 	enewuser mympd -1 -1 -1 audio
+  enewgroup mympd
 }
 
 src_compile() {
