@@ -41,5 +41,5 @@ src_install() {
   dobin cli_tools/mympd-config
   newinitd "${FILESDIR}/${PN}.init.d" "${PN}"
   insinto /etc
-	newins "${FILESDIR}/${PN}.conf" mympd.conf
+	newins "${FILESDIR}/${PN}.conf" "${PN}.conf"
 }
