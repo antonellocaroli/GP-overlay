@@ -6,7 +6,7 @@
 
 EAPI=7
 
-inherit cmake-utils
+inherit cmake-utils eutils user
 
 MY_PN="myMPD"
 
@@ -16,7 +16,7 @@ SRC_URI="https://github.com/jcorporation/${MY_PN}/archive/v${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~arm ~arm64"
 IUSE=""
 
 DEPEND=""
