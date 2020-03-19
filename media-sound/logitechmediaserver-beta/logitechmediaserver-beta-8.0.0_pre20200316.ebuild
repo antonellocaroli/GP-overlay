@@ -5,15 +5,15 @@ EAPI="6"
 
 inherit eutils user systemd
 
-MY_PN="${PN/-bin}"
+MY_PN="${PN/-beta}"
 
 PERL_VER="5.30"
 
 if [[ ${PV} == *_pre* ]] ; then
-	HASHID="01443c7aa444b7fbf3d9b657242ca77941e43840"
-	BUILDID="1582867832"
+	HASHID="ccfd4c201203471ff9ab20c6905b29ac3c72b10c"
+	BUILDID="1584422335"
 	MY_PV="${PV/_pre*}"
-	SRC_URI="http://downloads.slimdevices.com/nightly/7.9/sc/${HASHID}/${MY_PN}-${MY_PV}-${BUILDID}.tgz"
+	SRC_URI="http://downloads.slimdevices.com/nightly/8.0/lms/${HASHID}/${MY_PN}-${MY_PV}-${BUILDID}.tgz"
 #	SRC_URI="https://www.dropbox.com/s/ghkkob0aw3nfyug/${MY_PN}-${MY_PV}-${BUILDID}.tgz"
 	S="${WORKDIR}/${MY_PN}-${MY_PV}-${BUILDID}"
 	KEYWORDS="~amd64 ~arm64 ~arm"
