@@ -8,7 +8,7 @@ RESTORE_ON_START="yes"
 
 # SAVE_ON_STOP:
 # Do you want to save changes made to your mixer volumes when alsasound
-# stops? 
+# stops?
 # no - Do not save state
 # yes - Save state
 
