@@ -11,9 +11,9 @@ MY_PN=${PN/-bin/}
 DESCRIPTION="Network Audio Daemon"
 HOMEPAGE="http://www.signalyst.com/consumer.html"
 SRC_URI="
-    amd64? ( https://www.signalyst.eu/bins/naa/linux/buster/${MY_PN}_${PV}-45_amd64.deb )
-    arm64? ( https://www.signalyst.eu/bins/naa/linux/buster/${MY_PN}_${PV}-45_arm64.deb )
-    arm?   ( https://www.signalyst.eu/bins/naa/linux/buster/${MY_PN}_${PV}-45_armhf.deb )
+    amd64? ( https://www.signalyst.eu/bins/naa/linux/buster/${MY_PN}_${PV}-46_amd64.deb )
+    arm64? ( https://www.signalyst.eu/bins/naa/linux/buster/${MY_PN}_${PV}-46_arm64.deb )
+    arm?   ( https://www.signalyst.eu/bins/naa/linux/buster/${MY_PN}_${PV}-46_armhf.deb )
 "
 
 LICENSE="Signalyst"
