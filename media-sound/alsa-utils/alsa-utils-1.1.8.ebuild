@@ -1,11 +1,5 @@
-# Copyright 1999-2020 Gentoo Authors
-# Distributed under the terms of the GNU General Public License v2
-# $Id: 23a733a8a7b8b5a1c5efda259c71bbe5357026a6 $
-
 EAPI=7
 inherit systemd udev
-
-ADRIVER_PV="1.0.25"
 
 DESCRIPTION="Advanced Linux Sound Architecture Utils (alsactl, alsamixer, etc.)"
 HOMEPAGE="https://alsa-project.org/"
@@ -51,8 +45,6 @@ src_install() {
 	default
 	dodoc seq/*/README.*
 
-	newbin "${WORKDIR}/alsa-driver-${ADRIVER_PV}/utils/alsa-info.sh" alsa-info
-
 	newinitd "${FILESDIR}"/alsasound.initd-r7 alsasound
 	newconfd "${FILESDIR}"/alsasound.confd-r4 alsasound
 
@@ -77,8 +69,6 @@ pkg_postinst() {
 		elog "# rc-update add alsasound boot"
 		ewarn
 		ewarn "The ALSA core should be built into the kernel or loaded through other"
-		ewarn "means."
-		ewarn "Automated (un)loading of ALSA modules is deprecated and unsupported."
-		ewarn "Should you choose to use it, bug reports will not be accepted."
+		ewarn "means. There is no longer any modular auto(un)loading in alsa-utils."
 	fi
 }
