@@ -11,8 +11,8 @@ command_args="-nologfile -disableAutoUpdate"
 pidfile="/run/bubbleupnp.pid"
 start_stop_daemon_args="--background --make-pidfile --stderr ${logfile}"
 
+#need net
 depend() {
-    need net
     use alsasound
     after bootmisc
 }
