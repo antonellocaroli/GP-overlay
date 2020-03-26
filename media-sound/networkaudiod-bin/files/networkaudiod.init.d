@@ -12,8 +12,8 @@ command_args=""
 pidfile="/run/networkaudiod.pid"
 start_stop_daemon_args="--nicelevel -10 --background --make-pidfile --stderr ${logfile} --user ${user}"
 
+#need net
 depend() {
-    need net
     use alsasound
     after bootmisc
 }
