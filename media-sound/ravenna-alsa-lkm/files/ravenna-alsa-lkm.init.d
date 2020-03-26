@@ -13,8 +13,8 @@ command_args="
 command_background=yes
 pidfile=/run/roon.pid
 
+#need net
 depend() {
-    need net
     use alsasound
     after bootmisc
 }
