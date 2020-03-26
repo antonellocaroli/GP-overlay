@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <repositories version="1.0">
     <repo priority="150" quality="experimental" status="unofficial">
-        <name>antonellocaroli</name>
+        <name>GP-overlay</name>
         <description lang="en">antonellocaroli's GP-overlay</description>
         <homepage>https://github.com/antonellocaroli/GP-overlay.git</homepage>
         <owner>
