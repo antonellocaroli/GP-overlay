@@ -12,8 +12,8 @@ command_args=""
 pidfile="/run/hqplayerd.pid"
 start_stop_daemon_args="--nicelevel -10 --background --make-pidfile --stderr ${logfile} --user ${user}"
 
+#need net
 depend() {
-    need net
     use alsasound
     after bootmisc
 }
@@ -21,4 +21,3 @@ depend() {
 start_pre() {
     checkpath --file --owner $user --mode 0644 $logfile
 }
-
