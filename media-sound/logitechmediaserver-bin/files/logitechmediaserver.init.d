@@ -15,8 +15,8 @@ prefsdir=/etc/${lms}
 lmsuser=${lms}
 lmsbin=${optdir}/slimserver.pl
 
+#need net
 depend() {
-	need net
 	after bootmisc sshd
 }
 
