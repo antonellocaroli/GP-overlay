@@ -11,7 +11,10 @@ BASE_URI="http://download-cdn.resilio.com/${PV}/Debian/${PN}_${PV}-1_@arch@.deb"
 DESCRIPTION="Resilient, fast and scalable file synchronization tool"
 HOMEPAGE="https://resilio.com/"
 SRC_URI="amd64? ( ${BASE_URI/@arch@/amd64} )
-	x86? ( ${BASE_URI/@arch@/i386} )"
+	x86? ( ${BASE_URI/@arch@/i386} )
+	arm64? ( ${BASE_URI/@arch@/arm} )"
+
+	https://download-cdn.resilio.com/stable/linux-arm/resilio-sync_arm.tar.gz
 
 LICENSE="all-rights-reserved"
 SLOT="0"
