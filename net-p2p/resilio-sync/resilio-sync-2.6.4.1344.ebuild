@@ -14,9 +14,6 @@ SRC_URI="amd64? ( ${BASE_URI/@arch@/amd64} )
 	x86? ( ${BASE_URI/@arch@/i386} )
 	arm64? ( ${BASE_URI/@arch@/arm64} )"
 
-#https://download-cdn.resilio.com/2.6.4.1344/Debian/resilio-sync_2.6.4.1344-1_arm64.deb
-#	https://download-cdn.resilio.com/stable/linux-arm/resilio-sync_arm.tar.gz
-#	https://download-cdn.resilio.com/stable/linux-glibc-x64/resilio-sync_glibc23_x64.tar.gz
 
 LICENSE="all-rights-reserved"
 SLOT="0"
