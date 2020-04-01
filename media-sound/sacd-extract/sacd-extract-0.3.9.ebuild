@@ -6,7 +6,7 @@
 
 EAPI=6
 
-inherit eutils user cmake-utils
+inherit git-r3 eutils user cmake-utils
 
 MY_PN="myMPD"
 
