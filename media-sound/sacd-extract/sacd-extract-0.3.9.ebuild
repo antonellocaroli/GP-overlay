@@ -24,7 +24,7 @@ DEPEND=""
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
-S="${WORKDIR}/tools/sacd_extract"
+S="${WORKDIR}/${PN}-${PV}/tools/sacd_extract"
 
 
 src_compile() {
