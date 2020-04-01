@@ -11,7 +11,7 @@ inherit eutils user cmake-utils
 MY_PN="myMPD"
 
 DESCRIPTION="SACD ripping software using a PS3"
-HOMEPAGE="https://github.com/sacd-ripper/sacd-ripper"
+HOMEPAGE="https://github.com/setmind/sacd-ripper.git"
 SRC_URI="https://github.com/setmind/sacd-ripper.git"
 EGIT_COMMIT="58db5f16fcf410ae4d6aeca226a067b37ade136a"
 
