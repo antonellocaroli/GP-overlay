@@ -22,7 +22,7 @@ IUSE="systemd"
 RDEPEND=">=dev-libs/glib-2.37.3
 	>=media-libs/alsa-lib-1.0.28
 	>=x11-libs/libX11-1.6.7
-	>=x11-libs/libXext-1.3.3
+	>=x11-libs/libXext-1.3.4
 	>=x11-libs/libxcb-1.13.1
 	>=x11-libs/libXdmcp-1.1.2
 	>=x11-libs/gtk+-3.24.1
