@@ -2,7 +2,7 @@ diff --git a/Cargo.toml b/Cargo.toml
 index b7861fc..080dd41 100644
 --- a/Cargo.toml
 +++ b/Cargo.toml
-@@ -6,6 +6,7 @@ version = "0.2.24"
+@@ -6,6 +6,7 @@
 
  [dependencies]
  alsa = { version = "0.3", optional = true }
@@ -10,7 +10,7 @@ index b7861fc..080dd41 100644
  chrono = "0.4"
  daemonize = "0.4"
  dbus = { version = "0.6", optional = true }
-@@ -32,7 +33,16 @@ tokio-signal = "0.1"
+@@ -32,7 +33,16 @@
  url = "1.7"
  xdg = "2.2"
  whoami = "0.7.0"
@@ -26,5 +26,5 @@ index b7861fc..080dd41 100644
 +features = ["color"]
 +version = "0.3.2"
 
-[dev-dependencies]
-env_logger = "0.7"
+ [dev-dependencies]
+ env_logger = "0.7"
