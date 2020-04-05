@@ -10,7 +10,7 @@ index b7861fc..080dd41 100644
  chrono = "0.4"
  daemonize = "0.4"
  dbus = { version = "0.6", optional = true }
- @ -32,7 +33,16 @@ tokio-signal = "0.1"
+@@ -32,7 +33,16 @@ tokio-signal = "0.1"
  url = "1.7"
  xdg = "2.2"
  whoami = "0.7.0"
