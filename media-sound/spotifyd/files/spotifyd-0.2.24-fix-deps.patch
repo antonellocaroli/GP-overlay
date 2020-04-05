@@ -1,7 +1,7 @@
 diff --git a/Cargo.toml b/Cargo.toml
 index 4cf6e8f..d131318 100644
 --- a/Cargo.toml
-+++ b/Cargo1.toml
++++ b/Cargo.toml
 @@ -6,6 +6,7 @@ version = "0.2.24"
 
  [dependencies]
