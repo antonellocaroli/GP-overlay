@@ -1,3 +1,4 @@
+diff --git a/Cargo.toml b/Cargo.toml
 --- a/Cargo.toml
 +++ b/Cargo.toml
 @@ -6,6 +6,7 @@
@@ -15,7 +16,7 @@
 -librespot = { version = "0.1", default-features = false, features = ["with-tremor"] }
 +
 +[dependencies.librespot]
-+path = "../librespot-0.1.0"
++path = "../librespot-0.1.1"
 +default-features = false
 +features = ["with-tremor"]
 +version = "0.1.1"
