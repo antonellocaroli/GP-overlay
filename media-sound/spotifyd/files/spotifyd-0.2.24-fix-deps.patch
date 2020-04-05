@@ -1,5 +1,5 @@
---- Cargo.toml 2020-04-05 20:42:01.615993915 +0200
-+++ Cargo.toml 2020-04-05 20:23:04.215994051 +0200
+--- a/Cargo.toml
++++ b/Cargo.toml
 @@ -6,6 +6,7 @@
 
  [dependencies]
