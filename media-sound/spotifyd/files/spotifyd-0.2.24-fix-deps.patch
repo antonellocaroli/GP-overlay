@@ -14,7 +14,7 @@ index b7861fc..080dd41 100644
  url = "1.7"
  xdg = "2.2"
  whoami = "0.7.0"
- librespot = { version = "0.1", default-features = false, features = ["with-tremor"] }
+-librespot = { version = "0.1", default-features = false, features = ["with-tremor"] }
 +
 +[dependencies.librespot]
 +path = "../librespot-0.1.1"
