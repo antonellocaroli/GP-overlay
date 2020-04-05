@@ -448,7 +448,7 @@ pulseaudio? ( media-sound/pulseaudio )
 "
 DEPEND="${RDEPEND}"
 
-#PATCHES=( "${FILESDIR}/${P}-fix-deps.patch" )
+PATCHES=( "${FILESDIR}/${P}-fix-deps.patch" )
 
 src_configure() {
 	myfeatures=(
