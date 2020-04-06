@@ -443,6 +443,7 @@ xdg-2.2.0
 secret-service-1.0.0
 bytecount-0.4.0
 pulldown-cmark-0.2.0
+tempdir-0.3.7
 "
 
 inherit cargo
