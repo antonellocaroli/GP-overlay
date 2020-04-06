@@ -430,7 +430,7 @@ DESCRIPTION="A Spotify daemon"
 HOMEPAGE="https://github.com/Spotifyd/spotifyd/"
 SRC_URI="
 https://github.com/Spotifyd/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz
-https://github.com/librespot-org/librespot/archive/v0.1.1.tar.gz -> librespot.tar.gz
+https://github.com/librespot-org/librespot/archive/v0.1.0.tar.gz -> librespot.tar.gz
 $(cargo_crate_uris ${CRATES})"
 RESTRICT="mirror"
 LICENSE="GPL-3+"
