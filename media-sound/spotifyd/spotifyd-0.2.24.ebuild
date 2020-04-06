@@ -440,6 +440,7 @@ winapi-x86_64-pc-windows-gnu-0.4.0
 wincolor-1.0.1
 ws2_32-sys-0.2.1
 xdg-2.2.0
+secret-service-1.0.0
 "
 
 inherit cargo
