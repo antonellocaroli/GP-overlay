@@ -444,7 +444,7 @@ secret-service-1.0.0
 bytecount-0.4.0
 pulldown-cmark-0.2.0
 tempdir-0.3.7
-walkdir-2.2.9
+walkdir-2.3.0
 "
 
 inherit cargo
