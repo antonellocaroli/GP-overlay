@@ -361,6 +361,7 @@ syn-mid-0.4.0
 synstructure-0.10.2
 synstructure-0.12.3
 syslog-4.0.1
+skeptic-0.13.4
 take-0.1.0
 tempfile-3.1.0
 termcolor-1.0.5
