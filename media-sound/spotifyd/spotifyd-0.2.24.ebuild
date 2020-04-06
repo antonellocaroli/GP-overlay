@@ -82,6 +82,7 @@ daemonize-0.4.1
 darling-0.9.0
 darling_core-0.9.0
 darling_macro-0.9.0
+dbus-0.6.5
 derive_builder-0.7.2
 derive_builder_core-0.5.0
 digest-0.8.1
