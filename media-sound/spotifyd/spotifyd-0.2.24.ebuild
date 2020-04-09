@@ -456,7 +456,7 @@ tempdir-0.3.7
 walkdir-2.3.0
 "
 
-inherit cargo
+inherit cargo eutils
 
 DESCRIPTION="A Spotify daemon"
 HOMEPAGE="https://github.com/Spotifyd/spotifyd/"
@@ -501,6 +501,9 @@ src_install() {
    cargo_src_install ${myfeatures:+--features "${myfeatures[*]}"} --no-default-features
 
    keepdir /etc/xdg/spotifyd
+   newinitd "${FILESDIR}/${PN}.init.d" "${PN}"
+ 	 insinto /etc
+   newins "${FILESDIR}/${PN}.conf" "${PN}.conf"
 }
 
 src_test() {
