@@ -5,11 +5,11 @@
 
 description="Spotifyd streams music just like the official client"
 
-user="spotifyd:spotifyd"
+user="root:root"
 logfile="/var/log/spotifyd.log"
 command="/usr/bin/spotifyd"
 
-start_stop_daemon_args="--nicelevel -10 --user ${user}"
+start_stop_daemon_args="--nicelevel -10"
 
 command_background=yes
 pidfile=/run/spotifyd.pid
@@ -18,10 +18,6 @@ pidfile=/run/spotifyd.pid
 depend() {
     use alsasound
     after bootmisc
-}
-
-start_pre() {
-    checkpath --file --owner $user --mode 0644 $logfile
 }
 
 stop() {
