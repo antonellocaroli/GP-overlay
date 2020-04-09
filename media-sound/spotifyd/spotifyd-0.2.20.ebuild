@@ -361,7 +361,7 @@ ws2_32-sys-0.2.1
 xdg-2.2.0
 "
 
-inherit cargo eutils user
+inherit cargo eutils
 
 DESCRIPTION="A Spotify daemon"
 HOMEPAGE="https://github.com/Spotifyd/spotifyd/"
