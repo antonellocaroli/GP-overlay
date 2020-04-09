@@ -388,12 +388,6 @@ DEPEND="${RDEPEND}"
 
 PATCHES=( "${FILESDIR}/${P}-fix-deps.patch" )
 
-pkg_setup() {
-	# Create the user and group if not already present
-	enewgroup spotifyd
-	enewuser spotifyd -1 -1 "/dev/null" audio
-}
-
 src_configure() {
 	myfeatures=(
 		$(usex alsa alsa_backend "")
