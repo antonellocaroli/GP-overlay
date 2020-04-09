@@ -1,7 +1,8 @@
-diff -Naru a/Cargo.toml b/Cargo.toml
---- a/Cargo.toml	2020-04-08 14:28:16.124490869 +0200
-+++ b/Cargo.toml	2020-04-08 14:31:11.630494795 +0200
-@@ -6,6 +6,7 @@
+diff --git a/Cargo.toml b/Cargo.toml
+index 4cf6e8f..cfc53dd 100644
+--- a/Cargo.toml
++++ b/Cargo.toml
+@@ -6,6 +6,7 @@ version = "0.2.24"
 
  [dependencies]
  alsa = { version = "0.3", optional = true }
@@ -9,7 +10,7 @@ diff -Naru a/Cargo.toml b/Cargo.toml
  chrono = "0.4"
  daemonize = "0.4"
  dbus = { version = "0.6", optional = true }
-@@ -32,7 +33,16 @@
+@@ -32,7 +33,12 @@ tokio-signal = "0.1"
  url = "1.7"
  xdg = "2.2"
  whoami = "0.7.0"
@@ -20,10 +21,6 @@ diff -Naru a/Cargo.toml b/Cargo.toml
 +default-features = false
 +features = ["with-tremor"]
 +version = "0.1.1"
-+
-+[dependencies.structopt]
-+features = ["color"]
-+version = "0.3.2"
 
  [dev-dependencies]
  env_logger = "0.7"
