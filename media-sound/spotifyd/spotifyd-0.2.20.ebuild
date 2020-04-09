@@ -361,7 +361,7 @@ ws2_32-sys-0.2.1
 xdg-2.2.0
 "
 
-inherit cargo
+inherit cargo eutils user
 
 DESCRIPTION="A Spotify daemon"
 HOMEPAGE="https://github.com/Spotifyd/spotifyd/"
@@ -387,6 +387,12 @@ pulseaudio? ( media-sound/pulseaudio )
 DEPEND="${RDEPEND}"
 
 PATCHES=( "${FILESDIR}/${P}-fix-deps.patch" )
+
+pkg_setup() {
+	# Create the user and group if not already present
+	enewgroup spotifyd
+	enewuser spotifyd -1 -1 "/dev/null" audio
+}
 
 src_configure() {
 	myfeatures=(
