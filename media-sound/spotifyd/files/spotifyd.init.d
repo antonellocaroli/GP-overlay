@@ -26,7 +26,7 @@ start_pre() {
 
 stop() {
     ebegin "Stopping Spotifyd"
-    start-stop-daemon --stop --exec $command\
-    --retry 15 --pidfile $pidfile
+    start-stop-daemon --stop --quiet \
+    --exec /usr/bin/spotifyd
     eend $?
 }
