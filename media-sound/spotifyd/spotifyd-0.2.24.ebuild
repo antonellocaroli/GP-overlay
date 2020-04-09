@@ -6,6 +6,15 @@
 EAPI=7
 
 CRATES="
+shlex-0.1.1
+rustc-hash-1.0.1
+portaudio-sys-0.1.1
+bitflags-0.3.3
+num-rational-0.2.3
+num-iter-0.1.40
+same-file-1.0.6
+portaudio-rs-0.3.1
+libpulse-sys-0.0.0
 adler32-1.0.4
 advapi32-sys-0.2.0
 aes-0.3.2
@@ -14,7 +23,7 @@ aes-soft-0.3.3
 aesni-0.6.0
 aho-corasick-0.6.10
 aho-corasick-0.7.6
-alga-0.9.1
+alga-0.9.2
 alsa-0.2.2
 alsa-0.3.0
 alsa-sys-0.1.2
@@ -34,7 +43,7 @@ backtrace-sys-0.1.31
 backtrace-sys-0.1.32
 base64-0.10.1
 base64-0.9.3
-bindgen-0.32.3
+bindgen-0.51.1
 bit-set-0.5.1
 bit-vec-0.5.1
 bitflags-0.9.1
@@ -56,12 +65,12 @@ cargo_metadata-0.6.4
 cc-1.0.47
 cc-1.0.50
 cexpr-0.2.3
-cexpr-0.3.5
+cexpr-0.3.6
 cfg-if-0.1.10
 cfg-if-0.1.9
 chrono-0.4.10
 chrono-0.4.7
-clang-sys-0.21.2
+clang-sys-0.28.1
 clap-2.33.0
 cloudabi-0.0.3
 constant_time_eq-0.1.4
@@ -191,7 +200,7 @@ log-0.3.9
 log-0.4.7
 log-0.4.8
 matches-0.1.8
-matrixmultiply-0.2.2
+matrixmultiply-0.2.3
 maybe-uninit-2.0.0
 memchr-1.0.2
 memchr-2.2.1
@@ -209,17 +218,18 @@ mio-uds-0.6.7
 miow-0.2.1
 miow-0.3.3
 multimap-0.4.0
-nalgebra-0.18.0
+nalgebra-0.18.1
 native-tls-0.2.3
 net2-0.2.33
 nix-0.10.0
 nix-0.14.1
 nix-0.9.0
 nodrop-0.1.13
-nom-3.2.1
+nom-4.2.3
+num-0.2.1
 num-bigint-0.2.2
 num-bigint-0.2.5
-num-complex-0.2.3
+num-complex-0.2.4
 num-integer-0.1.41
 num-integer-0.1.42
 num-traits-0.2.11
@@ -284,7 +294,7 @@ rand_os-0.1.3
 rand_pcg-0.1.2
 rand_xorshift-0.1.1
 random-0.12.2
-rawpointer-0.1.0
+rawpointer-0.2.1
 rdrand-0.4.0
 redox_syscall-0.1.56
 regex-0.2.11
@@ -343,7 +353,6 @@ socket2-0.2.4
 socket2-0.3.10
 socket2-0.3.11
 spin-0.5.0
-spotifyd-0.2.24
 stable_deref_trait-1.1.1
 stdweb-0.1.3
 stream-cipher-0.3.0
@@ -453,7 +462,7 @@ DESCRIPTION="A Spotify daemon"
 HOMEPAGE="https://github.com/Spotifyd/spotifyd/"
 SRC_URI="
 https://github.com/Spotifyd/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz
-https://github.com/librespot-org/librespot/archive/v0.1.1.tar.gz -> librespot.tar.gz
+https://github.com/librespot-org/librespot/archive/v0.1.0.tar.gz -> librespot.tar.gz
 $(cargo_crate_uris ${CRATES})"
 RESTRICT="mirror"
 LICENSE="GPL-3+"
@@ -475,25 +484,25 @@ DEPEND="${RDEPEND}"
 PATCHES=( "${FILESDIR}/${P}-fix-deps.patch" )
 
 src_configure() {
-	myfeatures=(
-		$(usex alsa alsa_backend "")
-		$(usex dbus "dbus_keyring dbus_mpris" "")
-		$(usex portaudio portaudio_backend "")
-		$(usex pulseaudio pulseaudio_backend "")
-		$(usex rodio rodio_backend "")
-	)
+   myfeatures=(
+      $(usex alsa alsa_backend "")
+      $(usex dbus "dbus_keyring dbus_mpris" "")
+      $(usex portaudio portaudio_backend "")
+      $(usex pulseaudio pulseaudio_backend "")
+      $(usex rodio rodio_backend "")
+   )
 }
 
 src_compile() {
-	cargo_src_compile ${myfeatures:+--features "${myfeatures[*]}"} --no-default-features
+   cargo_src_compile ${myfeatures:+--features "${myfeatures[*]}"} --no-default-features
 }
 
 src_install() {
-	cargo_src_install ${myfeatures:+--features "${myfeatures[*]}"} --no-default-features
+   cargo_src_install ${myfeatures:+--features "${myfeatures[*]}"} --no-default-features
 
-	keepdir /etc/xdg/spotifyd
+   keepdir /etc/xdg/spotifyd
 }
 
 src_test() {
-	cargo_src_test ${myfeatures:+--features "${myfeatures[*]}"} --no-default-features
+   cargo_src_test ${myfeatures:+--features "${myfeatures[*]}"} --no-default-features
 }
