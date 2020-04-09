@@ -412,6 +412,9 @@ src_install() {
 	cargo_src_install ${myfeatures:+--features "${myfeatures[*]}"} --no-default-features
 
 	keepdir /etc/xdg/spotifyd
+	newinitd "${FILESDIR}/${PN}.init.d" "${PN}"
+	insinto /etc
+	newins "${FILESDIR}/${PN}.conf" "${PN}.conf"
 }
 
 src_test() {
