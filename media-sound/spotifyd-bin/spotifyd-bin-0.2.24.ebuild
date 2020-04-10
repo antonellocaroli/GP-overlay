@@ -27,7 +27,7 @@ S="${WORKDIR}"
 
 
 src_install() {
-    dobin Spotifyd
+    dobin spotifyd
     newinitd "${FILESDIR}/${MY_PN}.init.d" "${PN}"
     insinto /etc
     newins "${FILESDIR}/${MY_PN}.conf" "${PN}.conf"
