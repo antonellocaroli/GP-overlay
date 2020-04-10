@@ -18,6 +18,7 @@ SRC_URI="https://github.com/antonellocaroli/${PN}/releases/download/${PV}-amd64/
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm64"
+RESTRICT="mirror bindist"
 IUSE=""
 
 DEPEND=""
