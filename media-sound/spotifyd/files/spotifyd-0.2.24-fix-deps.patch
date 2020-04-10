@@ -1,0 +1,25 @@
+diff --git a/Cargo.toml b/Cargo.toml
+index 4cf6e8f..fd33a61 100644
+--- a/Cargo.toml
++++ b/Cargo.toml
+@@ -6,6 +6,7 @@ version = "0.2.24"
+
+ [dependencies]
+ alsa = { version = "0.3", optional = true }
++cc = "1.0.50"
+ chrono = "0.4"
+ daemonize = "0.4"
+ dbus = { version = "0.6", optional = true }
+@@ -32,7 +33,11 @@ tokio-signal = "0.1"
+ url = "1.7"
+ xdg = "2.2"
+ whoami = "0.7.0"
+-librespot = { version = "0.1", default-features = false, features = ["with-tremor"] }
++
++[dependencies.librespot]
++path = "../librespot-0.1.1"
++default-features = false
++version = "0.1.1"
+
+ [dev-dependencies]
+ env_logger = "0.7"
