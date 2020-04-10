@@ -8,8 +8,8 @@ description="Spotifyd streams music just like the official client"
 user="root:root"
 logfile="/var/log/spotifyd.log"
 command="/usr/bin/spotifyd"
-
-start_stop_daemon_args="--nicelevel -10"
+command_args="--no-daemon"
+start_stop_daemon_args="--nicelevel -10 --stderr ${logfile}"
 
 command_background=yes
 pidfile=/run/spotifyd.pid
