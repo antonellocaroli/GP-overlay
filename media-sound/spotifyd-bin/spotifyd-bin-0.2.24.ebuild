@@ -4,7 +4,7 @@
 
 EAPI=6
 
-inherit unpacker eutils
+inherit unpacker eutils user
 
 MY_PN=${PN/-bin/}
 
@@ -24,6 +24,12 @@ RDEPEND="${DEPEND}"
 BDEPEND=""
 
 S="${WORKDIR}"
+
+pkg_setup() {
+	# Create the user and group if not already present
+	enewgroup spotifyd
+	enewuser spotifyd -1 -1 "/dev/null" audio
+}
 
 
 src_install() {
