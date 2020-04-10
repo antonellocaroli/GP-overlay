@@ -10,8 +10,10 @@ MY_PN=${PN/-bin/}
 
 DESCRIPTION="A Spotify daemon"
 HOMEPAGE="https://github.com/Spotifyd/spotifyd/"
-SRC_URI="https://github.com/antonellocaroli/spotifyd-bin/releases/download/0.2.24-1/spotifyd-0.2.24-1-amd64.tar.gz"
-
+SRC_URI="
+    amd64? ( https://github.com/antonellocaroli/${PN}/releases/download/${PV}-amd64/${MY_PN}-${PV}-amd64.tar.gz )
+    arm64? ( https://github.com/antonellocaroli/${PN}/releases/download/${PV}-arm64/${MY_PN}-${PV}-arm64.tar.gz )
+"
 
 LICENSE="GPL-2"
 SLOT="0"
