@@ -12,7 +12,7 @@ MY_PN=${PN/-bin/}
 
 DESCRIPTION="A Spotify daemon"
 HOMEPAGE="https://github.com/Spotifyd/spotifyd/"
-SRC_URI="https://github.com/antonellocaroli/${PN}/releases/download/${PV}.1-amd64/${MY_PN}-amd64-${PV}.1.tar.xz"
+SRC_URI="https://github.com/antonellocaroli/spotifyd-bin/releases/download/0.2.24-1/spotifyd-0.2.24-1-amd64.tar.gz"
 
 
 LICENSE="GPL-2"
@@ -30,7 +30,7 @@ S="${WORKDIR}/${MY_PN}-${PV}"
 
 src_install() {
     dobin Spotifyd
-    newinitd "${FILESDIR}/${PN}.init.d" "${PN}"
+    newinitd "${FILESDIR}/${MY_PN}.init.d" "${PN}"
     insinto /etc
-    newins "${FILESDIR}/${PN}.conf" "${PN}.conf"
+    newins "${FILESDIR}/${MY_PN}.conf" "${PN}.conf"
 }
