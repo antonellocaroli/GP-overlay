@@ -20,16 +20,9 @@ depend() {
     after bootmisc
 }
 
-#stop() {
-#    ebegin "Stopping Spotifyd"
-#    start-stop-daemon --stop --quiet \
-#    --exec /usr/bin/spotifyd
-#    eend $?
-#}
-
 stop() {
-    ebegin "Stopping Spotifyd" \
+    ebegin "Stopping Spotifyd"
     start-stop-daemon --stop --quiet \
-    --exec /usr/bin/spotifyd \
+    --exec /usr/bin/spotifyd
     eend $?
 }
