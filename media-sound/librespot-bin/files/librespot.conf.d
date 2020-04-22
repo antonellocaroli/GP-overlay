@@ -1,3 +1,1 @@
-device=
-
-LS_OPTS="-n "GentooPlayer" -b 320 --initial-volume=100 --device $device"
+LS_OPTS="-n "GentooPlayer" -b 320 --initial-volume=100"
