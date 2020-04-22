@@ -30,6 +30,6 @@ S="${WORKDIR}"
 
 src_install() {
     dobin librespot
-    newconfd "${FILESDIR}/${PN}.conf.d" "${PN}"
-    newinitd "${FILESDIR}/${PN}.init.d" "${PN}"
+    newconfd "${FILESDIR}/${MY_PN}.conf.d" "${MY_PN}"
+    newinitd "${FILESDIR}/${MY_PN}.init.d" "${MY_PN}"
 }
