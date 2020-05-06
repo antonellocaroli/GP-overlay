@@ -613,8 +613,14 @@ src_install() {
 			dosym /usr/lib64/perl5/vendor_perl/5.30.2/aarch64-linux-thread-multi/Image /opt/logitechmediaserver/CPAN/Image
 		fi
 	elif use arm ; then
-		dosym /usr/lib/perl5/vendor_perl/5.30.1/armv7a-linux-thread-multi /opt/logitechmediaserver/CPAN/arch/5.30/armv7a-linux-thread-multi
-		dosym /usr/lib/perl5/vendor_perl/5.30.1/armv7a-linux-thread-multi/Image /opt/logitechmediaserver/CPAN/Image
+		if [ -d "/usr/lib/perl5/vendor_perl/5.30.1/armv7a-linux-thread-multi" ]
+		then
+			dosym /usr/lib/perl5/vendor_perl/5.30.1/armv7a-linux-thread-multi /opt/logitechmediaserver/CPAN/arch/5.30/armv7a-linux-thread-multi
+			dosym /usr/lib/perl5/vendor_perl/5.30.1/armv7a-linux-thread-multi/Image /opt/logitechmediaserver/CPAN/Image
+		else
+			dosym /usr/lib/perl5/vendor_perl/5.30.2/armv7a-linux-thread-multi /opt/logitechmediaserver/CPAN/arch/5.30/armv7a-linux-thread-multi
+			dosym /usr/lib/perl5/vendor_perl/5.30.2/armv7a-linux-thread-multi/Image /opt/logitechmediaserver/CPAN/Image
+		fi
 	fi
 }
 
