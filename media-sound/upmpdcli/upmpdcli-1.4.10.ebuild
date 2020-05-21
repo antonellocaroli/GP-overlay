@@ -30,8 +30,13 @@ pkg_setup() {
 	enewgroup "${PN}"
 }
 
+src_compile() {
+    ./configure --prefix=/usr --sysconfdir=/etc
+    make
+}
+
 src_install() {
-	default
+	make install
 	newinitd "${FILESDIR}/${PN}.initd" "${PN}"
 	newconfd "${FILESDIR}/${PN}.confd" "${PN}"
 	systemd_dounit systemd/upmpdcli.service
