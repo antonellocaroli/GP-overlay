@@ -552,9 +552,9 @@ src_install() {
 	dodir "${OPTDIR}"
 	cp -aR "${S}"/* "${ED}${OPTDIR}" || die "Unable to install package files"
 
-	dodoc ${DOCS}
-	dodoc "${FILESDIR}/Gentoo-plugins-README.txt"
-	dodoc "${FILESDIR}/Gentoo-detailed-changelog.txt"
+	#dodoc ${DOCS}
+	#dodoc "${FILESDIR}/Gentoo-plugins-README.txt"
+	#dodoc "${FILESDIR}/Gentoo-detailed-changelog.txt"
 
 	# Preferences directory
 	dodir "${PREFSDIR}"
