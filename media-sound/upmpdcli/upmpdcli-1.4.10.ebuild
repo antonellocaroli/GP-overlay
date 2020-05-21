@@ -36,7 +36,7 @@ src_compile() {
 }
 
 src_install() {
-	make install
+	default
 	newinitd "${FILESDIR}/${PN}.initd" "${PN}"
 	newconfd "${FILESDIR}/${PN}.confd" "${PN}"
 	systemd_dounit systemd/upmpdcli.service
