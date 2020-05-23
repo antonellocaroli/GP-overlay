@@ -36,7 +36,7 @@ src_compile() {
 }
 
 src_install() {
-	default
+	emake DESTDIR="${D}" install
 	newinitd "${FILESDIR}/${PN}.initd" "${PN}"
 	newconfd "${FILESDIR}/${PN}.confd" "${PN}"
 	systemd_dounit systemd/upmpdcli.service

@@ -12,7 +12,15 @@ KEYWORDS="amd64"
 
 DEPEND="
 	dev-libs/expat
-	net-libs/libupnp:0
 	net-misc/curl
 "
 RDEPEND="${DEPEND}"
+
+src_compile() {
+    ./configure --prefix=/usr --libdir=/usr/lib64
+    make
+}
+
+src_install() {
+	emake DESTDIR="${D}" install
+}
