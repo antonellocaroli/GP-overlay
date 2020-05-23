@@ -19,6 +19,7 @@ DEPEND="
 	media-libs/libmpdclient
 	net-libs/libmicrohttpd
 	>=net-libs/libupnpp-0.17.0
+	net-lib/libnpupnp
 "
 RDEPEND="
 	${DEPEND}
