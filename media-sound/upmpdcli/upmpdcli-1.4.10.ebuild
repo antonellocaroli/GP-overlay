@@ -50,7 +50,7 @@ pkg_postinst() {
 	einfo "USE=curl."
 	einfo
 	einfo "Consider installing media-sound/sc2mpd.  If upmpdcli"
-	einfo "detects sc2mpd at run-time, capabilities are added"
-	einfo "including internet radio support.  See upstream docs"
+	einfo "brings is Songcast multiroom synchronised playing"
+	einfo "see upstream docs"
 	einfo "for more information."
 }
