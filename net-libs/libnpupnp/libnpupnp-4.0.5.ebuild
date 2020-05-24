@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
-DESCRIPTION="The libupnpp C++ library wraps libupnp for easier use by upmpdcli and upplay"
+DESCRIPTION="UPnP base library, replacement for libupnp a.k.a. pupnp"
 HOMEPAGE="https://www.lesbonscomptes.com/upmpdcli"
 SRC_URI="https://www.lesbonscomptes.com/upmpdcli/downloads/${P}.tar.gz"
 
