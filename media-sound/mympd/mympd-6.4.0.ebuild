@@ -56,6 +56,7 @@ src_install() {
         systemd_newunit contrib/initscripts/mympd.service mympd.service
     fi
     ${D}/usr/bin/mympd-config --mympdconf ${D}/etc/mympd.conf.new
+    newinitd "${FILESDIR}/${PN}.init.d" "${PN}"
     dodoc ${S}/README.md
 }
 
