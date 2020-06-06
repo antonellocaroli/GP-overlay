@@ -7,7 +7,7 @@ inherit eutils user systemd
 
 MY_PN="${PN/-bin}"
 
-PERL_VERR=$(perl -e 'print substr($^V, 1)')
+
 PERL_VER="5.30"
 if [[ ${PV} == *_pre* ]] ; then
 	HASHID="596322f4cc9b3255a1e9f445111b15016034d967"
@@ -600,6 +600,7 @@ src_install() {
 	newins "${FILESDIR}/logitechmediaserver.logrotate.d" "${MY_PN}"
 
 	#symlink
+	PERL_VERR=$(perl -e 'print substr($^V, 1)')
 	dodir /opt/logitechmediaserver/CPAN/arch/5.30
 	if use amd64 ; then
 		dosym /usr/lib64/perl5/vendor_perl/$PERL_VERR/x86_64-linux-thread-multi /opt/logitechmediaserver/CPAN/arch/5.30/x86_64-linux-thread-multi
