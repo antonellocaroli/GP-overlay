@@ -7,7 +7,6 @@ inherit eutils user systemd
 
 MY_PN="${PN/-bin}"
 
-PERL_VERR=$(perl -e 'print substr($^V, 1)')
 PERL_VER="5.30"
 if [[ ${PV} == *_pre* ]] ; then
 	HASHID="596322f4cc9b3255a1e9f445111b15016034d967"
@@ -602,14 +601,26 @@ src_install() {
 	#symlink
 	dodir /opt/logitechmediaserver/CPAN/arch/5.30
 	if use amd64 ; then
-		dosym /usr/lib64/perl5/vendor_perl/$PERL_VERR/x86_64-linux-thread-multi /opt/logitechmediaserver/CPAN/arch/5.30/x86_64-linux-thread-multi
-		dosym /usr/lib64/perl5/vendor_perl/$PERL_VERR/x86_64-linux-thread-multi/Image /opt/logitechmediaserver/CPAN/Image
+		dosym /usr/lib64/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi /opt/logitechmediaserver/CPAN/arch/5.30/x86_64-linux-thread-multi
+		dosym /usr/lib64/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Image /opt/logitechmediaserver/CPAN/Image
 	elif use arm64 ; then
-			dosym /usr/lib64/perl5/vendor_perl/$PERL_VERR/aarch64-linux-thread-multi /opt/logitechmediaserver/CPAN/arch/5.30/aarch64-linux-thread-multi
-			dosym /usr/lib64/perl5/vendor_perl/$PERL_VERR/aarch64-linux-thread-multi/Image /opt/logitechmediaserver/CPAN/Image
+		if [ -d "/usr/lib64/perl5/vendor_perl/5.30.1/aarch64-linux-thread-multi" ]
+		then
+			dosym /usr/lib64/perl5/vendor_perl/5.30.1/aarch64-linux-thread-multi /opt/logitechmediaserver/CPAN/arch/5.30/aarch64-linux-thread-multi
+			dosym /usr/lib64/perl5/vendor_perl/5.30.1/aarch64-linux-thread-multi/Image /opt/logitechmediaserver/CPAN/Image
+		else
+			dosym /usr/lib64/perl5/vendor_perl/5.30.2/aarch64-linux-thread-multi /opt/logitechmediaserver/CPAN/arch/5.30/aarch64-linux-thread-multi
+			dosym /usr/lib64/perl5/vendor_perl/5.30.2/aarch64-linux-thread-multi/Image /opt/logitechmediaserver/CPAN/Image
+		fi
 	elif use arm ; then
-			dosym /usr/lib/perl5/vendor_perl/$PERL_VERR/armv7a-linux-thread-multi /opt/logitechmediaserver/CPAN/arch/5.30/armv7a-linux-thread-multi
-			dosym /usr/lib/perl5/vendor_perl/$PERL_VERR/armv7a-linux-thread-multi/Image /opt/logitechmediaserver/CPAN/Image
+		if [ -d "/usr/lib/perl5/vendor_perl/5.30.1/armv7a-linux-thread-multi" ]
+		then
+			dosym /usr/lib/perl5/vendor_perl/5.30.1/armv7a-linux-thread-multi /opt/logitechmediaserver/CPAN/arch/5.30/armv7a-linux-thread-multi
+			dosym /usr/lib/perl5/vendor_perl/5.30.1/armv7a-linux-thread-multi/Image /opt/logitechmediaserver/CPAN/Image
+		else
+			dosym /usr/lib/perl5/vendor_perl/5.30.2/armv7a-linux-thread-multi /opt/logitechmediaserver/CPAN/arch/5.30/armv7a-linux-thread-multi
+			dosym /usr/lib/perl5/vendor_perl/5.30.2/armv7a-linux-thread-multi/Image /opt/logitechmediaserver/CPAN/Image
+		fi
 	fi
 }
 
