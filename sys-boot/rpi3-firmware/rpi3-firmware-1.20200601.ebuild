@@ -31,6 +31,7 @@ pkg_preinst() {
 }
 
 src_install() {
+	cd boot
 	insinto /boot
 	doins *.elf
 	# allow for the dtbos to be provided by the kernel package
