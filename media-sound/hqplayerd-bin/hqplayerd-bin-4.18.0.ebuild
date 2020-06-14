@@ -32,7 +32,8 @@ RDEPEND=">=dev-libs/glib-2.37.3
   >=net-libs/gupnp-1.0.4
   >=net-libs/gupnp-av-0.12.11
 	>=dev-libs/libgee-0.20.2
-	>=dev-util/patchelf-0.10"
+	>=dev-util/patchelf-0.10
+	>=net-libs/libsoup-2.62.3"
 
 DEPEND="${RDEPEND}"
 
