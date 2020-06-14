@@ -56,7 +56,6 @@ src_unpack() {
 src_prepare() {
      default
      patchelf --replace-needed libomp.so.5 libomp.so usr/bin/hqplayerd || die
-		 patchelf --replace-needed libgupnp-1.0.so.4 libgupnp-1.2.so usr/bin/hqplayerd || die
 }
 
 src_install() {
