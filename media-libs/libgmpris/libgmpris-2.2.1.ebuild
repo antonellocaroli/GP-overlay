@@ -41,11 +41,19 @@ src_unpack() {
 #}
 
 src_prepare () {
-(cp usr/lib/x86_64-linux-gnu/libgmpris.so.0.0.0 usr/lib/)
-(mv usr/lib/ usr/lib64/)
-(chmod +x usr/lib64/libgmpris.so.0.0.0)
-(rm -r usr/lib64/x86_64-linux-gnu/)
-eapply_user
+if use amd64 ; then
+	(cp usr/lib/x86_64-linux-gnu/libgmpris.so.0.0.0 usr/lib/)
+	(mv usr/lib/ usr/lib64/)
+	(chmod +x usr/lib64/libgmpris.so.0.0.0)
+	(rm -r usr/lib64/x86_64-linux-gnu/)
+	eapply_user
+elif use arm64 ; then
+	(cp usr/lib/aarch64-linux-gnu/libgmpris.so.0.0.0 usr/lib/)
+	(mv usr/lib/ usr/lib64/)
+	(chmod +x usr/lib64/libgmpris.so.0.0.0)
+	(rm -r usr/lib64/aarch64-linux-gnu/)
+	eapply_user
+fi
 }
 
 #src_install() {
