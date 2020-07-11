@@ -12,7 +12,7 @@ MY_PN="myMPD"
 
 DESCRIPTION="myMPD is a standalone and mobile friendly web mpdclient"
 HOMEPAGE="https://github.com/jcorporation/myMPD"
-SRC_URI="https://github.com/jcorporation/${MY_PN}/archive/v${PV}.tar.gz -> ${PN}-${PV}.tar.gz"
+SRC_URI="https://github.com/jcorporation/${MY_PN}/archive/v.${PV}.tar.gz -> ${PN}-${PV}.tar.gz"
 
 
 LICENSE="GPL-2"
