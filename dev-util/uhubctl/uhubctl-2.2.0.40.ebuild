@@ -9,7 +9,7 @@ DESCRIPTION="uhubctl is utility to control USB power per-port on smart USB hubs"
 HOMEPAGE="https://github.com/mvp/uhubctl"
 
 EGIT_REPO_URI="https://github.com/mvp/uhubctl.git"
-EGIT_COMMIT="91035987e48e302453e9a376b4c646e906cf8318"
+EGIT_COMMIT="5ee8260c71647f687b5e71af11f45244814835d7"
 # see VERSION #def in squeezelite.h
 
 LICENSE="GPL-3"
