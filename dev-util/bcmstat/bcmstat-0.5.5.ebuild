@@ -2,8 +2,8 @@ EAPI=6
 inherit
 
 MY_PN="bcmstat"
-DESCRIPTION="music player"
-HOMEPAGE="https://roonlabs.com/index.html"
+DESCRIPTION="rpi util"
+HOMEPAGE="https://github.com/MilhouseVH/bcmstat"
 SRC_URI="https://github.com/MilhouseVH/bcmstat/archive/${PV}.tar.gz"
 
 
