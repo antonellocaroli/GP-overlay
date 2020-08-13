@@ -18,7 +18,7 @@ pidfile=/run/librespot.pid
 #need net
 depend() {
     use alsasound
-    after bootmisc
+    after bootmisc net*
 }
 
 stop() {
