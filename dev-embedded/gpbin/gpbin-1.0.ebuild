@@ -33,5 +33,5 @@ S="${WORKDIR}"
 
 src_install() {
     dobin *
-    newinitd ${FILESDIR}/*
+    doinitd ${FILESDIR}/*
 }
