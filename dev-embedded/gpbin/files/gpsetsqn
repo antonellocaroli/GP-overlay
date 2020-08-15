@@ -1,0 +1,17 @@
+#!/sbin/openrc-run
+# Copyright 1999-2016 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: $
+
+user="root:root"
+
+depend() {
+    use alsasound
+    after bootmisc squeezelite
+}
+
+start() {
+	ebegin "Starting ${SVCNAME}"
+        /usr/bin/${SVCNAME}
+        eend $?
+}
