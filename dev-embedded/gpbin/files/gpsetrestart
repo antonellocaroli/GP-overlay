@@ -1,0 +1,44 @@
+#!/sbin/openrc-run
+# Copyright 1999-2016 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: $
+
+user="root:root"
+
+depend() {
+    use alsasound
+    after *
+}
+
+_setrestart() {
+for runvel in `ls /etc/runlevels/default/ | grep "gpset" | sed 's/gpsetall//' | sed 's/gpsetrestart//' | awk 'NF'` ; do
+  f="$runvel"
+  sleep 5
+  rc-service "$f" restart
+  sleep 10
+  rc-service "$f" restart
+  sleep 20
+  rc-service "$f" restart
+  sleep 60
+  rc-service "$f" restart
+  sleep 60
+  rc-service "$f" restart
+  sleep 120
+  rc-service "$f" restart
+  sleep 120
+  rc-service "$f" restart
+done
+
+for runvel in `ls /etc/runlevels/default/ | grep "gpset"` ; do
+  f="$runvel"
+  rc-service "$f" stop
+done
+
+rc-service "${SVCNAME}" stop
+}
+
+start() {
+	ebegin "Starting ${SVCNAME}"
+        _setrestart
+        eend $?
+}

@@ -1,0 +1,37 @@
+#!/sbin/openrc-run
+# Copyright 1999-2016 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: $
+
+user="root:root"
+
+depend() {
+    use alsasound
+    before gpchronystop
+    after local
+}
+
+_ireteonline() {
+sleep 20
+ping -q -c 1 -W 1 8.8.8.8 && exit 0
+
+/etc/init.d/wpa_supplicant stop
+cp /etc/conf.d/net-hostapad /etc/conf.d/net 2>/dev/null
+cp /etc/conf.d/hostapd.back /etc/conf.d/hostapd 2>/dev/null
+/etc/init.d/net.wlan0 restart
+/etc/init.d/hostapd restart
+if [ -f /etc/conf.d/net-usr ]; then
+    cp /etc/conf.d/net-usr /etc/conf.d/net 2>/dev/null
+else
+    cp /etc/conf.d/net-wifi /etc/conf.d/net 2>/dev/null
+fi
+mv /etc/conf.d/hostapd /etc/conf.d/hostapd.back 2>/dev/null
+
+rc-service "${SVCNAME}" stop
+}
+
+start() {
+	ebegin "Starting ${SVCNAME}"
+        _ireteonline
+        eend $?
+}

@@ -7,13 +7,17 @@ user="root:root"
 
 depend() {
     use alsasound
-    after bootmisc
+    after local gpireteonline
 }
 
-
+_chronystop() {
+sleep 40
+rc-service chronyd stop
+rc-service "${SVCNAME}" stop
+}
 
 start() {
 	ebegin "Starting ${SVCNAME}"
-        /usr/bin/${SVCNAME}
+        _chronystop
         eend $?
 }

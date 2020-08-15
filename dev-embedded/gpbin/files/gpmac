@@ -1,0 +1,27 @@
+#!/sbin/openrc-run
+# Copyright 1999-2016 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: $
+
+user="root:root"
+
+depend() {
+    use alsasound
+    after bootmisc
+}
+
+_macad() {
+mac=$(ip a | sed '\|^ *link[^ ]* |!d;s|||;s| .*||' | sed 's/\00:00:00:00:00:00//g' | awk 'NF' | awk 'NR==1{print $1}' | cut -b -14)
+mac1=$(echo $mac$(od -txC -An -N1 /dev/random|tr \  :))
+mac2=$(echo $mac$(od -txC -An -N1 /dev/random|tr \  :))
+echo $mac1 > /etc/default/web/R2/mac0
+echo $mac2 > /etc/default/web/squeezelite/mac0
+rc-update del "${SVCNAME}" default
+rc-service "${SVCNAME}" stop
+}
+
+start() {
+	ebegin "Starting ${SVCNAME}"
+        _macad
+	eend $?
+}

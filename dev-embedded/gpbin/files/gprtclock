@@ -10,10 +10,14 @@ depend() {
     after bootmisc
 }
 
-
+_rtclock() {
+echo 3072 >/sys/class/rtc/rtc0/max_user_freq
+echo 3072 >/proc/sys/dev/hpet/max-user-freq
+rc-service "${SVCNAME}" stop
+}
 
 start() {
 	ebegin "Starting ${SVCNAME}"
-        /usr/bin/${SVCNAME}
+        _rtclock
         eend $?
 }

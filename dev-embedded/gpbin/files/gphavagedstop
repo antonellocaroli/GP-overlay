@@ -7,13 +7,22 @@ user="root:root"
 
 depend() {
     use alsasound
-    after bootmisc
+    before gpireteonline gpchronystop
+    after local
 }
 
+_havastop() {
+/etc/init.d/haveged stop
+sleep 4
+mount -a
+sleep 6
+mount -a
 
+rc-service "${SVCNAME}" stop
+}
 
 start() {
 	ebegin "Starting ${SVCNAME}"
-        /usr/bin/${SVCNAME}
+        _havastop
         eend $?
 }

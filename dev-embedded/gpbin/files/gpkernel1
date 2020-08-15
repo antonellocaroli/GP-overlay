@@ -1,0 +1,36 @@
+#!/sbin/openrc-run
+# Copyright 1999-2016 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: $
+
+user="root:root"
+
+depend() {
+    use alsasound
+    after bootmisc
+}
+
+_gpkernel1() {
+if [ -f /sys/bus/workqueue/devices/writeback/numa ]; then
+   echo 0 > /sys/bus/workqueue/devices/writeback/numa
+fi
+if [ -f /sys/bus/workqueue/devices/writeback/cpumask ]; then
+   echo 1 > /sys/bus/workqueue/devices/writeback/cpumask
+fi
+if [ -f /proc/sys/vm/dirty_writeback_centisecs ]; then
+   echo 1500 > /proc/sys/vm/dirty_writeback_centisecs
+fi
+if [ -f /proc/sys/kernel/nmi_watchdog ]; then
+   echo 0 > /proc/sys/kernel/nmi_watchdog
+fi
+if [ -f /proc/sys/vm/stat_interval ]; then
+  echo 1000 > /proc/sys/vm/stat_interval
+fi
+rc-service "${SVCNAME}" stop
+}
+
+start() {
+	ebegin "Starting ${SVCNAME}"
+        _gpkernel1
+        eend $?
+}
