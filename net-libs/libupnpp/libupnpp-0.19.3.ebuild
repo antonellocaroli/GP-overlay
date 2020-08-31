@@ -20,9 +20,9 @@ RDEPEND="${DEPEND}"
 src_compile() {
 	 if use arm ; then
     ./configure --prefix=/usr --libdir=/usr/lib
-	else
+	 else
 		./configure --prefix=/usr --libdir=/usr/lib64
-	fi
+	 fi
     make
 }
 
