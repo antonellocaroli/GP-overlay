@@ -8,7 +8,7 @@ SRC_URI="https://www.lesbonscomptes.com/upmpdcli/downloads/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm64"
+KEYWORDS="~amd64 ~arm64 ~arm"
 
 DEPEND="
 	dev-libs/expat
@@ -17,7 +17,11 @@ DEPEND="
 RDEPEND="${DEPEND}"
 
 src_compile() {
+	if use arm ; then
+		./configure --prefix=/usr --libdir=/usr/lib
+	else
     ./configure --prefix=/usr --libdir=/usr/lib64
+	fi
     make
 }
 
