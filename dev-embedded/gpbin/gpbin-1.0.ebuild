@@ -10,7 +10,10 @@ MY_PN=${PN/-bin/}
 
 DESCRIPTION="GentooPlayer binary"
 HOMEPAGE="http://gentooplayer.com/"
-SRC_URI="https://github.com/antonellocaroli/${PN}/releases/download/${PV}-arm64/${PN}-arm64.tar.gz"
+SRC_URI="
+      arm64? ( https://github.com/antonellocaroli/${PN}/releases/download/${PV}-arm64/${PN}-arm64.tar.gz )
+      arm? ( https://github.com/antonellocaroli/${PN}/releases/download/${PV}-arm/${PN}-arm.tar.gz )
+"
 
 #SRC_URI="
 #    amd64? ( https://github.com/antonellocaroli/${PN}/releases/download/${PV}-amd64/${PN}-arm64.tar.gz )
