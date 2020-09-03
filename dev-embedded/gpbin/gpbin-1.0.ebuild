@@ -13,13 +13,9 @@ HOMEPAGE="http://gentooplayer.com/"
 SRC_URI="
       arm64? ( https://github.com/antonellocaroli/${PN}/releases/download/${PV}-arm64/${PN}-arm64.tar.gz )
       arm? ( https://github.com/antonellocaroli/${PN}/releases/download/${PV}-arm/${PN}-arm.tar.gz )
+      amd64? ( https://github.com/antonellocaroli/${PN}/releases/download/${PV}-amd64/${PN}-amd64.tar.gz )
 "
 
-#SRC_URI="
-#    amd64? ( https://github.com/antonellocaroli/${PN}/releases/download/${PV}-amd64/${PN}-arm64.tar.gz )
-#    arm64? ( https://github.com/antonellocaroli/${PN}/releases/download/${PV}-arm64/${PN}-arm64.tar.gz )
-#    arm? ( https://github.com/antonellocaroli/${PN}/releases/download/${PV}-arm/${PN}-arm64.tar.gz )
-#"
 
 LICENSE="GPL-2"
 SLOT="0"
