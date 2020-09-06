@@ -29,7 +29,6 @@ for runvel in `ls /etc/runlevels/default/ | grep "gpset" | sed 's/gpsetall//' | 
   rc-service "$f" restart
 done
 
-#
 for runvel in `ls /etc/runlevels/default/ | grep "gpireteonline"` ; do
   f="$runvel"
   rc-service "$f" stop
