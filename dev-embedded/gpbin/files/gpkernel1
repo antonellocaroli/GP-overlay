@@ -26,7 +26,6 @@ fi
 if [ -f /proc/sys/vm/stat_interval ]; then
   echo 1000 > /proc/sys/vm/stat_interval
 fi
-rc-service "${SVCNAME}" stop
 }
 
 start() {

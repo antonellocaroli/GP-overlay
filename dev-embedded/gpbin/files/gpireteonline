@@ -26,8 +26,6 @@ else
     cp /etc/conf.d/net-wifi /etc/conf.d/net 2>/dev/null
 fi
 mv /etc/conf.d/hostapd /etc/conf.d/hostapd.back 2>/dev/null
-
-rc-service "${SVCNAME}" stop
 }
 
 start() {

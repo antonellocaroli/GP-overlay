@@ -34,6 +34,11 @@ for runvel in `ls /etc/runlevels/default/ | grep "gpireteonline"` ; do
   rc-service "$f" stop
 done
 
+for runvel in `ls /etc/runlevels/default/ | grep "gphavagedstop"` ; do
+  f="$runvel"
+  rc-service "$f" stop
+done
+
 for runvel in `ls /etc/runlevels/default/ | grep "gprtclock"` ; do
   f="$runvel"
   rc-service "$f" stop

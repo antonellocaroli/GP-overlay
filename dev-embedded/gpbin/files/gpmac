@@ -17,7 +17,6 @@ mac2=$(echo $mac$(od -txC -An -N1 /dev/random|tr \  :))
 echo $mac1 > /etc/default/web/R2/mac0
 echo $mac2 > /etc/default/web/squeezelite/mac0
 rc-update del "${SVCNAME}" default
-rc-service "${SVCNAME}" stop
 }
 
 start() {
