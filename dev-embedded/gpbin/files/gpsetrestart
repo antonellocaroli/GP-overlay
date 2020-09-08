@@ -11,6 +11,7 @@ depend() {
 }
 
 _setrestart() {
+(
 for runvel in `ls /etc/runlevels/default/ | grep "gpset" | sed 's/gpsetall//' | sed 's/gpsetrestart//' | awk 'NF'` ; do
   f="$runvel"
   sleep 5
@@ -60,6 +61,7 @@ for runvel in `ls /etc/runlevels/default/ | grep "gpset"` ; do
 done
 
 rc-service "${SVCNAME}" stop
+) &
 }
 
 start() {

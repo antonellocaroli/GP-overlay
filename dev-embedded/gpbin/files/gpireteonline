@@ -12,6 +12,7 @@ depend() {
 }
 
 _ireteonline() {
+(
 sleep 20
 ping -q -c 1 -W 1 8.8.8.8 && exit 0
 
@@ -26,6 +27,7 @@ else
     cp /etc/conf.d/net-wifi /etc/conf.d/net 2>/dev/null
 fi
 mv /etc/conf.d/hostapd /etc/conf.d/hostapd.back 2>/dev/null
+) &
 }
 
 start() {

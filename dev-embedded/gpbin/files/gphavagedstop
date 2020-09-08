@@ -12,11 +12,13 @@ depend() {
 }
 
 _havastop() {
+(
 /etc/init.d/haveged stop
 sleep 4
 mount -a
 sleep 6
 mount -a
+) &
 }
 
 start() {

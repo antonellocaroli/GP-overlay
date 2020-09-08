@@ -11,8 +11,10 @@ depend() {
 }
 
 _chronystop() {
+(
 sleep 40
 rc-service chronyd stop
+) &
 }
 
 start() {
