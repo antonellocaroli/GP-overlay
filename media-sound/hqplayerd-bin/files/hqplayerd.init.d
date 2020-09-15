@@ -15,7 +15,7 @@ start_stop_daemon_args="--nicelevel -10 --background --make-pidfile --stderr ${l
 #need net
 depend() {
     use alsasound
-    after bootmisc
+    after bootmisc net*
 }
 
 start_pre() {
