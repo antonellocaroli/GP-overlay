@@ -1,0 +1,15 @@
+#!/sbin/openrc-run
+
+user="root:root"
+
+depend() {
+    need localmount
+    after bootmisc
+    before xdm
+}
+
+start() {
+	ebegin "Starting ${SVCNAME}"
+        /etc/default/${SVCNAME}.sh
+        eend $?
+}
