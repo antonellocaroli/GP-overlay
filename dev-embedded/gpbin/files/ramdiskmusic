@@ -11,7 +11,7 @@ depend() {
 }
 
 _rammusic() {
-ramf="$(awk '/^Mem/ {print $4}' <(free -m)"
+ramf="$(free -m | awk '/^Mem/ {print $4}')"
 percent=
 ram="$(( $ramf*"$percent"/100 ))"
 mkdir /mnt/ramdiskmusic 2>/dev/null
