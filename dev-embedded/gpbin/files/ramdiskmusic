@@ -1,0 +1,28 @@
+#!/sbin/openrc-run
+# Copyright 1999-2016 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: $
+
+user="root:root"
+
+depend() {
+    use alsasound
+    after ramdisk net*
+}
+
+_rammusic() {
+ram=
+mkdir /mnt/ramdiskmusic 2>/dev/null
+mkdir /media/ramdiskmusic 2>/dev/null
+umount -l /media/ramdiskmusic/ /mnt/ramdiskmusic/ 2>/dev/null
+
+mount none -t tmpfs /mnt/ramdiskmusic -o size="$ram"M
+rsync -a /media/ramdiskmusic/ /mnt/ramdiskmusic
+mount -o bind /mnt/ramdiskmusic/ /media/ramdiskmusic/
+}
+
+start() {
+	ebegin "Starting ${SVCNAME}"
+        _rammusic
+        eend $?
+}
