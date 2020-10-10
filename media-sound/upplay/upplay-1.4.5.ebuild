@@ -15,13 +15,14 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="
-		dev-libs/expat
-		dev-libs/jsoncpp
-		dev-qt/qtnetwork:5
-		dev-qt/qtwebkit:5
-		>=media-libs/libupnpp-0.17.0
-		net-libs/libupnp:0
-		net-misc/curl"
+     dev-libs/expat
+     dev-libs/jsoncpp
+     dev-qt/qtnetwork:5
+     dev-qt/qtwebkit:5
+     >=net-libs/libnpupnp-4.0.10
+     >=net-libs/libupnpp-0.19.1
+     net-libs/libmicrohttpd
+     net-misc/curl"
 RDEPEND="${DEPEND}"
 
 src_compile() {
