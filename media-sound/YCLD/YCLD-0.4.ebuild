@@ -14,7 +14,7 @@ SRC_URI="https://audiodigitale.eu/repo/ycld/${PN}-${PV}.tar.gz"
 
 
 
-LICENSE="BubbleUPnP-Server"
+LICENSE="audiodigitale.eu"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~arm64 ~arm"
 IUSE="systemd"
