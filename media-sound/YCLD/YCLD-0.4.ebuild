@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit systemd
+inherit
 
 MY_PN=${PN/-bin/}
 
