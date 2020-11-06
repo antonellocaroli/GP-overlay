@@ -15,7 +15,7 @@ SRC_URI="https://audiodigitale.eu/repo/ycld/${PN}-${PV}.tar.gz"
 
 LICENSE="Simone Filippini"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~arm64"
+KEYWORDS="~amd64 ~arm64"
 
 DEPEND="virtual/jre:1.8
 	media-sound/camilladsp-bin"
@@ -29,5 +29,5 @@ src_install() {
         doins YCLD.jar
         dodir "/opt/${PN}/config"
         insinto "/opt/${PN}/config"
-        doins "${FILESDIR}/config.properties-${PV}" "config.properties"
+        newins "${FILESDIR}/config.properties-${PV}" "config.properties"
 }
