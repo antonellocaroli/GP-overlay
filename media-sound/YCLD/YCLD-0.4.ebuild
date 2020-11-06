@@ -17,7 +17,6 @@ SRC_URI="https://audiodigitale.eu/repo/ycld/${PN}-${PV}.tar.gz"
 LICENSE="Simone Filippini"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~arm64 ~arm"
-IUSE="systemd"
 
 #DEPEND="virtual/jre:1.8
 #	media-video/ffmpeg
