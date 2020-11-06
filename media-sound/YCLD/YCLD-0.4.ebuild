@@ -5,7 +5,6 @@ EAPI=7
 
 inherit
 
-MY_PN=${PN/-bin/}
 
 DESCRIPTION="software based on CamillaDSP and SoX to do offline batch audio file convertion, upsampling and convolution"
 HOMEPAGE="https://audiodigitale.eu/"
@@ -26,9 +25,9 @@ BDEPEND=""
 S="${WORKDIR}"
 
 src_install() {
-        insinto "/opt/${MY_PN}/"
+        insinto "/opt/${PN}/"
         doins YCLD.jar
-        dodir "/opt/${MY_PN}/config"
-        insinto "/opt/${MY_PN}/config"
+        dodir "/opt/${PN}/config"
+        insinto "/opt/${PN}/config"
         doins "config/config.properties"
 }
