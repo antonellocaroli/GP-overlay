@@ -29,7 +29,7 @@ S="${WORKDIR}"
 src_install() {
 	insinto "/opt/${MY_PN}/"
 	doins YCLD.jar
-  doins config
+  dodir config
 }
 
 pkg_postinst() {
