@@ -29,5 +29,5 @@ src_install() {
         doins YCLD.jar
         dodir "/opt/${PN}/config"
         insinto "/opt/${PN}/config"
-        doins "${FILESDIR}/config.properties"
+        doins "${FILESDIR}/config.properties-${PV}" "config.properties"
 }
