@@ -29,5 +29,5 @@ S="${WORKDIR}"
 
 
 src_install() {
-    dobin librespot
+    dobin camilladsp
 }
