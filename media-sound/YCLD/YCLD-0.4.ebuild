@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm64"
 
 DEPEND="virtual/jre:1.8
-	media-sound/camilladsp-bin"
+	media-sound/camilladsp"
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
