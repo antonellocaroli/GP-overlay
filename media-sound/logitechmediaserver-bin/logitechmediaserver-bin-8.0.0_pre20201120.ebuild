@@ -475,6 +475,25 @@ RDEPEND="
 		opt/logitechmediaserver/CPAN/arch/5.30/x86_64-linux-thread-multi/auto/Template/Stash/XS/XS.so
 		opt/logitechmediaserver/CPAN/arch/5.30/x86_64-linux-thread-multi/auto/XML/Parser/Expat/Expat.so
 		opt/logitechmediaserver/CPAN/arch/5.30/x86_64-linux-thread-multi/auto/YAML/XS/LibYAML/LibYAML.so
+		opt/logitechmediaserver/CPAN/arch/5.32/x86_64-linux-thread-multi/auto/Audio/Scan/Scan.so
+    opt/logitechmediaserver/CPAN/arch/5.32/x86_64-linux-thread-multi/auto/Class/XSAccessor/XSAccessor.so
+    opt/logitechmediaserver/CPAN/arch/5.32/x86_64-linux-thread-multi/auto/DBD/SQLite/SQLite.so
+    opt/logitechmediaserver/CPAN/arch/5.32/x86_64-linux-thread-multi/auto/DBI/DBI.so
+    opt/logitechmediaserver/CPAN/arch/5.32/x86_64-linux-thread-multi/auto/Digest/SHA1/SHA1.so
+    opt/logitechmediaserver/CPAN/arch/5.32/x86_64-linux-thread-multi/auto/Encode/Detect/Detector/Detector.so
+    opt/logitechmediaserver/CPAN/arch/5.32/x86_64-linux-thread-multi/auto/EV/EV.so
+    opt/logitechmediaserver/CPAN/arch/5.32/x86_64-linux-thread-multi/auto/HTML/Parser/Parser.so
+    opt/logitechmediaserver/CPAN/arch/5.32/x86_64-linux-thread-multi/auto/Image/Scale/Scale.so
+    opt/logitechmediaserver/CPAN/arch/5.32/x86_64-linux-thread-multi/auto/IO/AIO/AIO.so
+    opt/logitechmediaserver/CPAN/arch/5.32/x86_64-linux-thread-multi/auto/IO/Interface/Interface.so
+    opt/logitechmediaserver/CPAN/arch/5.32/x86_64-linux-thread-multi/auto/JSON/XS/XS.so
+    opt/logitechmediaserver/CPAN/arch/5.32/x86_64-linux-thread-multi/auto/Linux/Inotify2/Inotify2.so
+    opt/logitechmediaserver/CPAN/arch/5.32/x86_64-linux-thread-multi/auto/Media/Scan/Scan.so
+    opt/logitechmediaserver/CPAN/arch/5.32/x86_64-linux-thread-multi/auto/MP3/Cut/Gapless/Gapless.so
+    opt/logitechmediaserver/CPAN/arch/5.32/x86_64-linux-thread-multi/auto/Sub/Name/Name.so
+    opt/logitechmediaserver/CPAN/arch/5.32/x86_64-linux-thread-multi/auto/Template/Stash/XS/XS.so
+    opt/logitechmediaserver/CPAN/arch/5.32/x86_64-linux-thread-multi/auto/XML/Parser/Expat/Expat.so
+    opt/logitechmediaserver/CPAN/arch/5.32/x86_64-linux-thread-multi/auto/YAML/XS/LibYAML/LibYAML.so
 		opt/logitechmediaserver/CPAN/arch/5.8/x86_64-linux-thread-multi/auto/Audio/Scan/Scan.so
 		opt/logitechmediaserver/CPAN/arch/5.8/x86_64-linux-thread-multi/auto/Class/C3/XS/XS.so
 		opt/logitechmediaserver/CPAN/arch/5.8/x86_64-linux-thread-multi/auto/Class/XSAccessor/XSAccessor.so
