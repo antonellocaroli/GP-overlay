@@ -27,6 +27,7 @@ RDEPEND=">=sys-devel/gcc-5.1.0[openmp]
 	>=dev-qt/qtwidgets-5.5.0
 	>=dev-qt/qtnetwork-5.5.0
 	>=dev-qt/qtdeclarative-5.5.0
+	>=dev-qt/qtscript-5.15.1
 	>=net-libs/libmicrohttpd-0.9.62
 	>=dev-qt/qtquickcontrols2-5.11.3
 	manual? ( app-text/evince )"
