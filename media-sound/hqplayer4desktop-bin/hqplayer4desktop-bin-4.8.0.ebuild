@@ -34,7 +34,7 @@ RDEPEND=">=sys-devel/gcc-5.1.0[openmp]
 	>=net-libs/libmicrohttpd-0.9.62
 	>=dev-qt/qtquickcontrols2-5.11.3
 	manual? ( app-text/evince )
-	client? ( media-sound/hqplayer4client-bin)"
+	client? ( media-sound/hqplayer4client-bin )"
 
 DEPEND="${RDEPEND}"
 
