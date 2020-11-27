@@ -14,7 +14,7 @@ SRC_URI="http://www.signalyst.eu/bins/hqplayer/bionic/${MY_PN}_${PV}-16_amd64.de
 
 LICENSE="Signalyst"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 RESTRICT="mirror bindist"
 
 RDEPEND=">=sys-devel/gcc-5.1.0[openmp]
