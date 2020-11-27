@@ -47,6 +47,7 @@ src_unpack() {
 
 src_prepare() {
 	rm -rf usr/bin/hqplayer4client
+	default
 }
 
 src_install() {
