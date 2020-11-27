@@ -17,7 +17,7 @@ LICENSE="Signalyst"
 SLOT="0"
 KEYWORDS="~amd64"
 RESTRICT="mirror bindist"
-IUSE="manual"
+IUSE="manual client"
 
 RDEPEND=">=sys-devel/gcc-5.1.0[openmp]
 	>=media-libs/alsa-lib-1.0.16
@@ -33,15 +33,20 @@ RDEPEND=">=sys-devel/gcc-5.1.0[openmp]
 	>=dev-qt/qtcharts-5.15.1
 	>=net-libs/libmicrohttpd-0.9.62
 	>=dev-qt/qtquickcontrols2-5.11.3
-	manual? ( app-text/evince )"
+	manual? ( app-text/evince )
+	client? ( media-sound/hqplayer4client-bin)"
 
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}"
-QA_PREBUILT="usr/bin/hqp-control usr/bin/hqplayer"
+QA_PREBUILT="usr/bin/hqp-control2 usr/bin/hqplayer4client usr/bin/haqplayer4desktop"
 
 src_unpack() {
 	unpack_deb ${A}
+}
+
+src_prepare() {
+	rm -rf usr/bin/hqplayer4client
 }
 
 src_install() {
