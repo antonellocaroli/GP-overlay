@@ -27,7 +27,7 @@ RDEPEND=">=sys-devel/gcc-5.1.0[openmp]
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}"
-QA_PREBUILT="usr/bin/hqp-control usr/bin/hqplayer"
+QA_PREBUILT="usr/bin/hqplayer4client"
 
 src_unpack() {
 	unpack_deb ${A}
