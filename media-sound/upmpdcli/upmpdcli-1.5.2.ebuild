@@ -18,7 +18,7 @@ DEPEND="
 	dev-libs/jsoncpp
 	media-libs/libmpdclient
 	net-libs/libmicrohttpd
-	>=net-libs/libupnpp-0.17.0
+	>=net-libs/libupnpp-0.20.1
 "
 RDEPEND="
 	${DEPEND}
