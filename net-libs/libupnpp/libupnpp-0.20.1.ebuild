@@ -13,7 +13,7 @@ KEYWORDS="~amd64 ~arm64 ~arm"
 DEPEND="
 	dev-libs/expat
 	net-misc/curl
-	net-libs/libnpupnp
+	>=net-libs/libnpupnp-4.0.14
 "
 RDEPEND="${DEPEND}"
 
