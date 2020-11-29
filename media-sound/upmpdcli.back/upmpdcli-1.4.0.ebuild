@@ -11,7 +11,7 @@ LICENSE="GPL-2"
 
 SRC_URI="https://www.lesbonscomptes.com/upmpdcli/downloads/${P}.tar.gz"
 SLOT="0"
-KEYWORDS="~amd64 ~arm64"
+KEYWORDS="amd64"
 IUSE="thirdparty"
 
 DEPEND="
@@ -30,13 +30,8 @@ pkg_setup() {
 	enewgroup "${PN}"
 }
 
-src_compile() {
-    ./configure --prefix=/usr --sysconfdir=/etc
-    make
-}
-
 src_install() {
-	emake DESTDIR="${D}" install
+	default
 	newinitd "${FILESDIR}/${PN}.initd" "${PN}"
 	newconfd "${FILESDIR}/${PN}.confd" "${PN}"
 	systemd_dounit systemd/upmpdcli.service
@@ -45,12 +40,12 @@ src_install() {
 pkg_postinst() {
 	einfo
 	einfo "This package no longer assumes that upmpdcli is driving an"
-	einfo "mpd instance on the same host (https://bugs.gentoo.org/670130)."
+	einfo "mpdinstance on the same host (https://bugs.gentoo.org/670130)."
 	einfo "Probably it is though, so be sure your mpd is built with"
 	einfo "USE=curl."
 	einfo
 	einfo "Consider installing media-sound/sc2mpd.  If upmpdcli"
-	einfo "brings is Songcast multiroom synchronised playing"
-	einfo "see upstream docs"
+	einfo "detects sc2mpd at run-time, capabilities are added"
+	einfo "including internet radio support.  See upstream docs"
 	einfo "for more information."
 }
