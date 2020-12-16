@@ -19,7 +19,7 @@ audiocardid="hw:CARD=$cardid,DEV=$dev"
 cat > /etc/conf.d/squeezelite-R2 <<EOF
 SL_OPTS="-C 3 -o $audiocardid -r 44100 -n R2@1start"
 EOF
-/etc/init.d/squeezelite-R2 start
+/etc/init.d/squeezelite-R2 restart
 rc-update del "${SVCNAME}" default
 }
 
