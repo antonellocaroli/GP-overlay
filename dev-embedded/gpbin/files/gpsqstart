@@ -12,6 +12,7 @@ depend() {
 
 _sqstart() {
 audiocard=$(aplay -l |awk '/^card / { print $0 }' | grep -w "USB")
+card=$(echo $audiocard | awk '{print $2}' | sed 's/\://g')
 cardid=$(cat /proc/asound/card$card/id)
 dev=$(cat /proc/asound/card$card/pcm0p/info | awk 'NR==2' | awk '{print $2}')
 audiocardid="hw:CARD=$cardid,DEV=$dev"
