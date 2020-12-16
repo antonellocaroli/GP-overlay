@@ -1,0 +1,29 @@
+#!/sbin/openrc-run
+# Copyright 1999-2016 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: $
+
+user="root:root"
+
+depend() {
+    use alsasound
+    after bootmisc
+}
+
+_sqstart() {
+audiocard=$(aplay -l |awk '/^card / { print $0 }' | grep -w "USB")
+cardid=$(cat /proc/asound/card$card/id)
+dev=$(cat /proc/asound/card$card/pcm0p/info | awk 'NR==2' | awk '{print $2}')
+audiocardid="hw:CARD=$cardid,DEV=$dev"
+cat > /etc/conf.d/squeezelite-R2 <<EOF
+SL_OPTS="-C 3 -o $audiocardid -r 44100 -n R2@1start"
+EOF
+/etc/init.d/squeezelite-R2 start
+rc-update del "${SVCNAME}" default
+}
+
+start() {
+	ebegin "Starting ${SVCNAME}"
+        _sqstart
+	eend $?
+}
