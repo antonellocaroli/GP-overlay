@@ -38,5 +38,5 @@ src_unpack() {
 }
 
 src_install() {
-	mv usr opt "${D}" || die
+	mv usr "${D}" || die
 }
