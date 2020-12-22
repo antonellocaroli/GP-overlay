@@ -11,7 +11,7 @@ MY_PN=${PN/-bin/}
 DESCRIPTION="GitHub Desktop is an open source Electron-based GitHub app"
 HOMEPAGE="https://desktop.github.com/"
 #SRC_URI="https://github.com/atom/atom/releases/download/v${PV}/${MY_PN}-amd64.deb"
-SRC_URI="https://github.com/shiftkey/desktop/releases/download/release-${PV}-linux2/GitHubDesktop-linux-${PV}-linux2.deb"
+SRC_URI="https://github.com/shiftkey/desktop/releases/download/release-${PV}-linux1/GitHubDesktop-linux-${PV}-linux1.deb"
 #SRC_URI="https://github.com/shiftkey/desktop/releases/download/release-2.4.0-linux1/GitHubDesktop-linux-2.4.0-linux1.deb"
 
 LICENSE="GitHub"
