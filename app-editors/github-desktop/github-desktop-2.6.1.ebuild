@@ -11,6 +11,7 @@ SRC_URI="https://github.com/shiftkey/desktop/releases/download/release-${PV}-lin
 LICENSE="GitHub"
 SLOT="0"
 KEYWORDS="~amd64"
+RESTRICT="mirror bindist"
 
 RDEPEND=">=gnome-base/gconf-3.2.6-r4 
     >=x11-libs/libnotify-0.7.8
@@ -23,6 +24,7 @@ RDEPEND=">=gnome-base/gconf-3.2.6-r4 
     >=gnome-base/gnome-keyring-3.31.91-r1"
 
 DEPEND="${RDEPEND}"
+
 
 S="${WORKDIR}"
 QA_PREBUILT="usr/lib64/github-desktop/swiftshader/*.so
