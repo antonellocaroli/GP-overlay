@@ -11,7 +11,6 @@ SRC_URI="https://github.com/shiftkey/desktop/releases/download/release-${PV}-lin
 LICENSE="GitHub"
 SLOT="0"
 KEYWORDS="~amd64"
-RESTRICT="mirror bindist"
 
 RDEPEND=">=gnome-base/gconf-3.2.6-r4 
     >=x11-libs/libnotify-0.7.8
@@ -20,7 +19,7 @@ RDEPEND=">=gnome-base/gconf-3.2.6-r4 
     >=dev-libs/nss-3.51
     >=net-misc/curl-7.68.0
     >=app-crypt/libsecret-0.18.8
-    >=dev-libs/openssl-compat:0.0.0
+    dev-libs/openssl-compat:0.0.0
     >=gnome-base/gnome-keyring-3.31.91-r1"
 
 DEPEND="${RDEPEND}"
@@ -46,6 +45,7 @@ QA_PREBUILT="usr/lib64/github-desktop/swiftshader/*.so
     usr/lib64/github-desktop/resources/app/git/bin/git
     usr/lib64/github-desktop/*.so
     usr/bin/github-desktop"
+
 
 src_install() {
     dobin usr/bin/github-desktop
