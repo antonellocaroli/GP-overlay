@@ -8,7 +8,6 @@ inherit unpacker xdg
 DESCRIPTION="GitHub Desktop is an open source Electron-based GitHub app"
 HOMEPAGE="https://desktop.github.com/"
 SRC_URI="https://github.com/shiftkey/desktop/releases/download/release-${PV}-linux2/GitHubDesktop-linux-${PV}-linux2.deb"
-
 LICENSE="GitHub"
 SLOT="0"
 KEYWORDS="~amd64"
@@ -20,7 +19,7 @@ RDEPEND=">=gnome-base/gconf-3.2.6-r4 
     >=dev-libs/nss-3.51
     >=net-misc/curl-7.68.0
     >=app-crypt/libsecret-0.18.8
-    dev-libs/openssl-compat:0.0.0
+    >=dev-libs/openssl-compat:0.0.0
     >=gnome-base/gnome-keyring-3.31.91-r1"
 
 DEPEND="${RDEPEND}"
