@@ -21,6 +21,7 @@ cp /etc/conf.d/net-hostapad /etc/conf.d/net 2>/dev/null
 cp /etc/conf.d/hostapd.back /etc/conf.d/hostapd 2>/dev/null
 /etc/init.d/net.wlan0 restart
 /etc/init.d/hostapd restart
+/etc/init.d/dnsmasq restart
 if [ -f /etc/conf.d/net-usr ]; then
     cp /etc/conf.d/net-usr /etc/conf.d/net 2>/dev/null
 else
