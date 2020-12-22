@@ -43,8 +43,7 @@ QA_PREBUILT="usr/lib64/github-desktop/swiftshader/*.so
     usr/lib64/github-desktop/resources/app/git/libexec/git-core/git-http-backend
     usr/lib64/github-desktop/resources/app/git/libexec/git-core/git-fast-import
     usr/lib64/github-desktop/resources/app/git/bin/git
-    usr/lib64/github-desktop/*.so
-    usr/bin/github-desktop"
+    usr/lib64/github-desktop/*.so"
 
 src_install() {
         insinto /usr/share
