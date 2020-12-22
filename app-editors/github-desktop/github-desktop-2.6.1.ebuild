@@ -8,6 +8,7 @@ inherit unpacker xdg
 DESCRIPTION="GitHub Desktop is an open source Electron-based GitHub app"
 HOMEPAGE="https://desktop.github.com/"
 SRC_URI="https://github.com/shiftkey/desktop/releases/download/release-${PV}-linux2/GitHubDesktop-linux-${PV}-linux2.deb"
+
 LICENSE="GitHub"
 SLOT="0"
 KEYWORDS="~amd64"
@@ -23,7 +24,6 @@ RDEPEND=">=gnome-base/gconf-3.2.6-r4 
     >=gnome-base/gnome-keyring-3.31.91-r1"
 
 DEPEND="${RDEPEND}"
-
 
 S="${WORKDIR}"
 QA_PREBUILT="usr/lib64/github-desktop/swiftshader/*.so
@@ -46,15 +46,14 @@ QA_PREBUILT="usr/lib64/github-desktop/swiftshader/*.so
     usr/lib64/github-desktop/*.so
     usr/bin/github-desktop"
 
-
 src_install() {
-    dobin usr/bin/github-desktop
+        insinto /usr/share
+        doins -r usr/share/{applications,icons,lintian}
+        insinto /usr/share/doc/"${P}"
+        doins usr/share/doc/github-desktop/copyright
 
-    insinto /usr/share
-    doins -r usr/share/{applications,icons,lintian}
-    insinto /usr/share/doc/"${P}"
-    doins usr/share/doc/github-desktop/copyright
+        dodir /usr/lib64/github-desktop
+        cp -r usr/lib/github-desktop/. "${ED}/usr/lib64/github-desktop/" || die
 
-    dodir /usr/lib64/github-desktop
-    cp -r usr/lib/github-desktop/. "${ED}/usr/lib64/github-desktop/" || die
+        dosym ../lib64/github-desktop/github-desktop /usr/bin/github-desktop
 }
