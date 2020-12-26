@@ -10,8 +10,8 @@ MY_PN="${PN/-bin}"
 
 PERL_VER="5.30"
 if [[ ${PV} == *_pre* ]] ; then
-	HASHID="b7d9ed8e7356981cb9d5ce2cea67bd5f1d7b6ee3"
-	BUILDID="1607593012"
+	HASHID="8b4b6da43b9349b3dc5b87eb08b350a55f540e08"
+	BUILDID="1608617100"
 	MY_PV="${PV/_pre*}"
 	SRC_URI="http://downloads-origin.slimdevices.com/nightly/8.0/lms/${HASHID}/${MY_PN}-${MY_PV}-${BUILDID}.tgz"
 #	SRC_URI="https://www.dropbox.com/s/ghkkob0aw3nfyug/${MY_PN}-${MY_PV}-${BUILDID}.tgz"
@@ -49,7 +49,7 @@ RDEPEND="
 	!prefix? ( >=sys-apps/baselayout-2.0.0 )
 	!prefix? ( virtual/logger )
 	app-admin/logrotate
-	=dev-lang/perl-${PERL_VER}*[ithreads]
+	>=dev-lang/perl-5.8.8[ithreads]
 	>=dev-perl/Data-UUID-1.202
 	>=dev-perl/Audio-Scan-0.930.0
 	>=virtual/perl-IO-Compress-2.015
