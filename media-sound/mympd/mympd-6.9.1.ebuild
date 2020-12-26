@@ -54,12 +54,14 @@ src_install() {
 	if use lua; then
 		dobin cli_tools/mympd-script
 	fi
-	newinitd "contrib/initscripts/mympd.openrc" "${PN}"
-	if use systemd; then
-		systemd_newunit contrib/initscripts/mympd.service mympd.service
-	fi
-	"${D}/usr/bin/mympd-config" --mympdconf "${D}/etc/mympd.conf"
-	dodoc "${S}/README.md"
+  newinitd "${FILESDIR}/${PN}.init.d" "${PN}"
+  if use systemd; then
+      systemd_newunit contrib/initscripts/mympd.service mympd.service
+  fi
+  insinto /etc
+  ${D}/usr/bin/mympd-config --mympdconf ${D}/etc/mympd.conf.new
+  newins "${FILESDIR}/${PN}.conf" "${PN}.conf"
+  dodoc ${S}/README.md
 }
 
 pkg_postinst() {
