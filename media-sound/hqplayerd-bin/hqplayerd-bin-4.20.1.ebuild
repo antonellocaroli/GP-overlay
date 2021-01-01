@@ -57,12 +57,17 @@ src_unpack() {
 src_prepare() {
      default
        patchelf --replace-needed libomp.so.5 libomp.so usr/bin/hqplayerd || die
-		   patchelf --replace-needed libgupnp-1.0.so.4 libgupnp-1.2.so.0 usr/bin/hqplayerd || die
+       if use amd64 ; then
+       patchelf --replace-needed libgupnp-1.0.so.4 libgupnp-1.2.so.0 usr/bin/hqplayerd || die
+       fi
 }
 
 src_install() {
 	mv etc lib usr var "${D}" || die
 	rm "${D}usr/share/doc/hqplayerd/changelog.Debian.gz"
+  if use arm64 ; then
+  dosym "${ED%/}"/usr/lib64/libgupnp-1.2.so /usr/lib64/libgupnp-1.0.so.4
+  fi
 	if use systemd; then
 		systemd_dounit "${FILESDIR}/${MY_PN}.service"
 	else
