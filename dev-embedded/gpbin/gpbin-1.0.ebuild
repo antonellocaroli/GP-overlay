@@ -17,7 +17,7 @@ SRC_URI="
 "
 
 
-LICENSE="GPL-2"
+LICENSE="gentooplayer"
 SLOT="0"
 KEYWORDS="~amd64 ~arm64 ~arm"
 RESTRICT="mirror bindist"
