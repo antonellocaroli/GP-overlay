@@ -16,7 +16,7 @@ SRC_URI="
     arm? ( https://github.com/antonellocaroli/${PN}/releases/download/${PV}-arm/${MY_PN}-${PV}-arm.tar.gz )
 "
 
-LICENSE="GPL-2"
+LICENSE="librespot"
 SLOT="0"
 KEYWORDS="~amd64 ~arm64 ~arm"
 RESTRICT="mirror bindist"
