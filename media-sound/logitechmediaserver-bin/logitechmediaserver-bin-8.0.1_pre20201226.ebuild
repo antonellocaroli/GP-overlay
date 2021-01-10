@@ -45,6 +45,11 @@ DEPEND="
 	"
 
 # Runtime dependencies.
+#dev-perl/CGI
+#dev-perl/IO-AIO
+#dev-perl/IO-Interface
+#dev-perl/Linux-Inotify2
+#dev-perl/MP3-Cut-Gapless
 RDEPEND="
 	!prefix? ( >=sys-apps/baselayout-2.0.0 )
 	!prefix? ( virtual/logger )
