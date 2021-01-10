@@ -63,7 +63,7 @@ RDEPEND="
 	dev-perl/JSON-XS
 	dev-perl/Linux-Inotify2
 	dev-perl/Sub-Name
-	dev-perl/Template-Toolkit[gd]
+	>=dev-perl/Template-Toolkit-2.19
 	dev-perl/XML-Parser
 	dev-perl/YAML-LibYAML
 	dev-perl/MP3-Cut-Gapless
