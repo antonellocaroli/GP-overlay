@@ -46,10 +46,13 @@ DEPEND="
 
 # Runtime dependencies.
 #dev-perl/CGI
-#dev-perl/IO-AIO
-#dev-perl/IO-Interface
-#dev-perl/Linux-Inotify2
 #dev-perl/MP3-Cut-Gapless
+#>=dev-perl/Encode-Detect-1.01
+#>=dev-perl/YAML-LibYAML-0.410.0
+#>=virtual/perl-IO-Compress-2.015
+#>=dev-perl/Class-C3-XS-0.13
+#>=dev-perl/IO-String-1.08
+#>=dev-perl/IO-Socket-SSL-2.24.0
 RDEPEND="
 	!prefix? ( >=sys-apps/baselayout-2.0.0 )
 	!prefix? ( virtual/logger )
@@ -57,24 +60,20 @@ RDEPEND="
 	>=dev-lang/perl-5.8.8[ithreads]
 	>=dev-perl/Data-UUID-1.202
 	>=dev-perl/Audio-Scan-0.930.0
-	>=virtual/perl-IO-Compress-2.015
-	>=dev-perl/Class-C3-XS-0.13
 	>=dev-perl/Class-XSAccessor-1.03
 	>=dev-perl/DBI-1.607
 	>=dev-perl/DBD-SQLite-1.350.0
 	>=dev-perl/Digest-SHA1-2.11
 	>=dev-perl/EV-4.150.0
-	>=dev-perl/Encode-Detect-1.01
 	>=dev-perl/HTML-Parser-3.56
 	>=dev-perl/Image-Scale-0.80.0
-	>=virtual/perl-IO-Compress-2.015
-	>=dev-perl/IO-String-1.08
-	>=dev-perl/JSON-XS-2.2.3.1
 	>=dev-perl/Sub-Name-0.04
 	>=dev-perl/Template-Toolkit-2.19
 	>=dev-perl/XML-Parser-2.36
-	>=dev-perl/YAML-LibYAML-0.410.0
-	>=dev-perl/IO-Socket-SSL-2.24.0
+	dev-perl/Linux-Inotify2
+	dev-perl/IO-AIO
+	dev-perl/IO-Interface
+	>=dev-perl/JSON-XS-2.2.3.1
 	"
 
 	QA_PREBUILT="
