@@ -47,7 +47,7 @@ RDEPEND="
 	dev-db/sqlite
 	>=dev-lang/perl-5.8.8[ithreads]
 	>=dev-perl/Data-UUID-1.202
-	>=dev-perl/Audio-Scan-1.20.0
+	>=dev-perl/Audio-Scan-0.930.0
 	>=dev-perl/Class-XSAccessor-1.180.0
 	dev-perl/CGI
 	dev-perl/Class-C3-XS
