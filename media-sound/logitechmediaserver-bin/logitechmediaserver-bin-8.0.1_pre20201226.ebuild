@@ -53,6 +53,10 @@ DEPEND="
 #>=dev-perl/Class-C3-XS-0.13
 #>=dev-perl/IO-String-1.08
 #>=dev-perl/IO-Socket-SSL-2.24.0
+###da ricontrollare se é possibile togliere
+#>=dev-perl/Data-UUID-1.202
+#>=dev-perl/Template-Toolkit-2.19
+#>=dev-perl/XML-Parser-2.36
 RDEPEND="
 	!prefix? ( >=sys-apps/baselayout-2.0.0 )
 	!prefix? ( virtual/logger )
@@ -74,6 +78,12 @@ RDEPEND="
 	dev-perl/IO-AIO
 	dev-perl/IO-Interface
 	>=dev-perl/JSON-XS-2.2.3.1
+	>=dev-perl/Encode-Detect-1.01
+	>=dev-perl/YAML-LibYAML-0.410.0
+	>=virtual/perl-IO-Compress-2.015
+	>=dev-perl/Class-C3-XS-0.13
+	>=dev-perl/IO-String-1.08
+	>=dev-perl/IO-Socket-SSL-2.24.0
 	"
 
 	QA_PREBUILT="
