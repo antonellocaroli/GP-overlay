@@ -213,7 +213,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	default	
+	default
 
 	# fix default user name to run as
 	sed -e "s/squeezeboxserver/logitechmediaserver/" -i slimserver.pl
@@ -359,7 +359,7 @@ lms_clean_oldfiles() {
 	einfo "locating "
 	MY_PERL_VENDORPATH=$(LANG="en_US.UTF-8" LC_ALL="en_US.UTF-8" perl -V | grep vendorarch | sed "s/^.*vendorarch=//" | sed "s/ .*$//g")
 	cd ${MY_PERL_VENDORPATH}
-	find -type f | sed "s/^\.\///" | grep -v "/DBIx/" | while read file; do 
+	find -type f | sed "s/^\.\///" | grep -v "/DBIx/" | while read file; do
 		if [ -f ${EROOT}${BINDIR}/CPAN/${file} ]; then
 			rm -v ${EROOT}${BINDIR}/CPAN/${file}
 		fi
