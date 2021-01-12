@@ -45,9 +45,6 @@ DEPEND="
 	"
 
 # Runtime dependencies.
-#dev-perl/CGI
-#dev-perl/MP3-Cut-Gapless
-#>=dev-perl/Encode-Detect-1.01
 #>=dev-perl/YAML-LibYAML-0.410.0
 #>=virtual/perl-IO-Compress-2.015
 #>=dev-perl/Class-C3-XS-0.13
@@ -81,6 +78,12 @@ RDEPEND="
 	>=dev-perl/Encode-Detect-1.01
 	>=dev-perl/YAML-LibYAML-0.410.0
 	>=virtual/perl-IO-Compress-2.015
+	>=dev-perl/Class-C3-XS-0.13
+	>=dev-perl/IO-String-1.08
+	>=dev-perl/IO-Socket-SSL-2.24.0
+	dev-perl/CGI
+	dev-perl/MP3-Cut-Gapless
+	>=dev-perl/Encode-Detect-1.01
 	>=dev-perl/Class-C3-XS-0.13
 	>=dev-perl/IO-String-1.08
 	>=dev-perl/IO-Socket-SSL-2.24.0
