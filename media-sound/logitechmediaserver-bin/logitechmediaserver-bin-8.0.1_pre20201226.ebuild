@@ -666,7 +666,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-uuid-gentoo.patch"
 	epatch "${FILESDIR}/${P}-client-playlists-gentoo.patch"
 	(cd CPAN && rm -rf Image)
-	(cd CPAN/arch && rm -rf 5.10 5.12 5.14 5.16 5.18 5.20 5.22 5.24 5.26 5.28 5.30 5.8)
+	(cd CPAN/arch && rm -rf 5.10 5.12 5.14 5.16 5.18 5.20 5.22 5.24 5.26 5.28 5.30 5.32 5.8)
 	(cd Bin && rm -rf arm-linux i86pc-solaris* sparc-linux i386-linux powerpc-linux)
 	if use amd64 ; then
 		rm -rf Bin/aarch64-linux rm -rf Bin/armhf-linux
@@ -737,17 +737,20 @@ src_install() {
 	newins "${FILESDIR}/logitechmediaserver.logrotate.d" "${MY_PN}"
 
 	#symlink
-	PERL_VERR=$(perl -e 'print substr($^V, 1)')
-	dodir /opt/logitechmediaserver/CPAN/arch/5.30
+	#PERL_VERR=$(perl -e 'print substr($^V, 1)')
+	PERL_VERR64=$(ls -1 /usr/lib64/perl5/vendor_perl/)
+	PERL_VERR32=$(ls -1 /usr/lib32/perl5/vendor_perl/)
+	PERL_VERR1=$(perl -e 'print substr($^V, 1)' | awk '{print substr ($1,1,4)}')
+	dodir /opt/logitechmediaserver/CPAN/arch/$PERL_VERR1
 	if use amd64 ; then
-		dosym /usr/lib64/perl5/vendor_perl/$PERL_VERR/x86_64-linux-thread-multi /opt/logitechmediaserver/CPAN/arch/5.30/x86_64-linux-thread-multi
-		dosym /usr/lib64/perl5/vendor_perl/$PERL_VERR/x86_64-linux-thread-multi/Image /opt/logitechmediaserver/CPAN/Image
+		dosym /usr/lib64/perl5/vendor_perl/$PERL_VERR64/x86_64-linux-thread-multi /opt/logitechmediaserver/CPAN/arch/5.30/x86_64-linux-thread-multi
+		dosym /usr/lib64/perl5/vendor_perl/$PERL_VERR64/x86_64-linux-thread-multi/Image /opt/logitechmediaserver/CPAN/Image
 	elif use arm64 ; then
-			dosym /usr/lib64/perl5/vendor_perl/$PERL_VERR/aarch64-linux-thread-multi /opt/logitechmediaserver/CPAN/arch/5.30/aarch64-linux-thread-multi
-			dosym /usr/lib64/perl5/vendor_perl/$PERL_VERR/aarch64-linux-thread-multi/Image /opt/logitechmediaserver/CPAN/Image
+			dosym /usr/lib64/perl5/vendor_perl/$PERL_VERR64/aarch64-linux-thread-multi /opt/logitechmediaserver/CPAN/arch/5.30/aarch64-linux-thread-multi
+			dosym /usr/lib64/perl5/vendor_perl/$PERL_VERR64/aarch64-linux-thread-multi/Image /opt/logitechmediaserver/CPAN/Image
 	elif use arm ; then
-			dosym /usr/lib/perl5/vendor_perl/$PERL_VERR/armv7a-linux-thread-multi /opt/logitechmediaserver/CPAN/arch/5.30/armv7a-linux-thread-multi
-			dosym /usr/lib/perl5/vendor_perl/$PERL_VERR/armv7a-linux-thread-multi/Image /opt/logitechmediaserver/CPAN/Image
+			dosym /usr/lib/perl5/vendor_perl/$PERL_VERR32/armv7a-linux-thread-multi /opt/logitechmediaserver/CPAN/arch/5.30/armv7a-linux-thread-multi
+			dosym /usr/lib/perl5/vendor_perl/$PERL_VERR32/armv7a-linux-thread-multi/Image /opt/logitechmediaserver/CPAN/Image
 	fi
 }
 
