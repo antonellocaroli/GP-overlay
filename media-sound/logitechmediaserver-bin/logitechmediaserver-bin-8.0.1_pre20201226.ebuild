@@ -743,13 +743,13 @@ src_install() {
 	PERL_VERR1=$(perl -e 'print substr($^V, 1)' | awk '{print substr ($1,1,4)}')
 	dodir /opt/logitechmediaserver/CPAN/arch/$PERL_VERR1
 	if use amd64 ; then
-		dosym /usr/lib64/perl5/vendor_perl/$PERL_VERR64/x86_64-linux-thread-multi /opt/logitechmediaserver/CPAN/arch/5.30/x86_64-linux-thread-multi
+		dosym /usr/lib64/perl5/vendor_perl/$PERL_VERR64/x86_64-linux-thread-multi /opt/logitechmediaserver/CPAN/arch/$PERL_VERR1/x86_64-linux-thread-multi
 		dosym /usr/lib64/perl5/vendor_perl/$PERL_VERR64/x86_64-linux-thread-multi/Image /opt/logitechmediaserver/CPAN/Image
 	elif use arm64 ; then
-			dosym /usr/lib64/perl5/vendor_perl/$PERL_VERR64/aarch64-linux-thread-multi /opt/logitechmediaserver/CPAN/arch/5.30/aarch64-linux-thread-multi
+			dosym /usr/lib64/perl5/vendor_perl/$PERL_VERR64/aarch64-linux-thread-multi /opt/logitechmediaserver/CPAN/arch/$PERL_VERR1/aarch64-linux-thread-multi
 			dosym /usr/lib64/perl5/vendor_perl/$PERL_VERR64/aarch64-linux-thread-multi/Image /opt/logitechmediaserver/CPAN/Image
 	elif use arm ; then
-			dosym /usr/lib/perl5/vendor_perl/$PERL_VERR32/armv7a-linux-thread-multi /opt/logitechmediaserver/CPAN/arch/5.30/armv7a-linux-thread-multi
+			dosym /usr/lib/perl5/vendor_perl/$PERL_VERR32/armv7a-linux-thread-multi /opt/logitechmediaserver/CPAN/arch/$PERL_VERR1/armv7a-linux-thread-multi
 			dosym /usr/lib/perl5/vendor_perl/$PERL_VERR32/armv7a-linux-thread-multi/Image /opt/logitechmediaserver/CPAN/Image
 	fi
 }
