@@ -738,8 +738,8 @@ src_install() {
 
 	#symlink
 	#PERL_VERR=$(perl -e 'print substr($^V, 1)')
-	PERL_VERR64=$(ls -1 /usr/lib64/perl5/vendor_perl/)
-	PERL_VERR32=$(ls -1 /usr/lib32/perl5/vendor_perl/)
+	PERL_VERR64=$(ls -1 /usr/lib64/perl5/vendor_perl/ | tail -1)
+	PERL_VERR32=$(ls -1 /usr/lib32/perl5/vendor_perl/ | tail -1)
 	PERL_VERR1=$(perl -e 'print substr($^V, 1)' | awk '{print substr ($1,1,4)}')
 	dodir /opt/logitechmediaserver/CPAN/arch/$PERL_VERR1
 	if use amd64 ; then
