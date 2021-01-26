@@ -18,10 +18,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~arm64 ~arm"
 IUSE="systemd"
 
-DEPEND="virtual/jre:1.8
+DEPEND="virtual/jdk:1.8
 	media-video/ffmpeg
 	dev-libs/nss"
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+virtual/jre:1.8
+dev-java/icedtea-bin"
 BDEPEND=""
 
 S="${WORKDIR}"
