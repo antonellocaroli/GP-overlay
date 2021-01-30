@@ -47,6 +47,8 @@ src_unpack() {
 
 src_prepare() {
 	rm -rf usr/bin/hqplayer4client
+	rm -rf usr/share/applications/hqplayer4-client.desktop
+	rm -rf usr/share/pixmaps/hqplayer4-client.png
 	default
 }
 
