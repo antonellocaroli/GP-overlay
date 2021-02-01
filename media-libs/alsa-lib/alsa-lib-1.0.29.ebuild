@@ -4,7 +4,7 @@
 EAPI=5
 
 # no support for python3_2 or above yet wrt #471326
-PYTHON_COMPAT=( python2_7 )
+PYTHON_COMPAT=( python3_{7,8} )
 
 inherit autotools eutils multilib multilib-minimal python-single-r1
 
