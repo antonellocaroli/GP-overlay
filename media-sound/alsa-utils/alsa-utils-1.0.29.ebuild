@@ -14,7 +14,7 @@ SLOT="0.9"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~sh sparc x86"
 IUSE="doc +libsamplerate +ncurses nls selinux"
 
-CDEPEND=">=media-libs/alsa-lib-${PV}
+CDEPEND="=media-libs/alsa-lib-1.0.29
 	libsamplerate? ( media-libs/libsamplerate )
 	ncurses? ( >=sys-libs/ncurses-5.7-r7:0= )"
 DEPEND="${CDEPEND}

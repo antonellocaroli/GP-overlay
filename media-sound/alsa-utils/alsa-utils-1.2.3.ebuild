@@ -1,11 +1,8 @@
 # Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 564a4e6888fcbe6021e2351b74cb2d0ed29c4c94 $
 
 EAPI=7
 inherit systemd udev
-
-ADRIVER_PV="1.0.25"
 
 DESCRIPTION="Advanced Linux Sound Architecture Utils (alsactl, alsamixer, etc.)"
 HOMEPAGE="https://alsa-project.org/"
@@ -13,10 +10,10 @@ SRC_URI="https://www.alsa-project.org/files/pub/utils/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0.9"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86"
+KEYWORDS="~alpha amd64 arm arm64 ~hppa ~ia64 ~mips ppc ppc64 sparc x86"
 IUSE="bat doc +libsamplerate +ncurses nls selinux"
 
-CDEPEND="=media-libs/alsa-lib-1.2.2-r1
+CDEPEND="=media-libs/alsa-lib-1.2.3.2-r1
 	libsamplerate? ( media-libs/libsamplerate )
 	ncurses? ( >=sys-libs/ncurses-5.7-r7:0= )
 	bat? ( sci-libs/fftw:= )"
@@ -75,8 +72,6 @@ pkg_postinst() {
 		elog "# rc-update add alsasound boot"
 		ewarn
 		ewarn "The ALSA core should be built into the kernel or loaded through other"
-		ewarn "means."
-		ewarn "Automated (un)loading of ALSA modules is deprecated and unsupported."
-		ewarn "Should you choose to use it, bug reports will not be accepted."
+		ewarn "means. There is no longer any modular auto(un)loading in alsa-utils."
 	fi
 }

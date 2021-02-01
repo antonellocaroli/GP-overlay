@@ -10,7 +10,7 @@ SLOT="0.9"
 KEYWORDS="~alpha amd64 arm ~arm64 ~hppa ia64 ~mips ppc ppc64 ~sh ~sparc x86"
 IUSE="bat doc +libsamplerate +ncurses nls selinux"
 
-CDEPEND=">=media-libs/alsa-lib-${PV}
+CDEPEND="=media-libs/alsa-lib-1.1.8
 	libsamplerate? ( media-libs/libsamplerate )
 	ncurses? ( >=sys-libs/ncurses-5.7-r7:0= )
 	bat? ( sci-libs/fftw:= )"
