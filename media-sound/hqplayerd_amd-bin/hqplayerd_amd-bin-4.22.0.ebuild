@@ -6,11 +6,11 @@ EAPI=6
 
 inherit unpacker user systemd
 
-MY_PN=${PN/-bin/}
+MY_PN=${PN/_amd-bin/}
 
 DESCRIPTION="HQPlayer Embedded - upsampling multichannel audio player"
 HOMEPAGE="http://www.signalyst.com/consumer.html"
-SRC_URI="https://www.signalyst.eu/bins/hqplayerd/focal/hqplayerd_${PV}-62amd_amd64.deb"
+SRC_URI="https://www.signalyst.eu/bins/hqplayerd/focal/${MY_PN}_${PV}-62amd_amd64.deb"
 #         https://www.signalyst.eu/bins/hqplayerd/focal/hqplayerd_4.22.0-62amd_amd64.deb
 
 LICENSE="Signalyst"
@@ -71,7 +71,7 @@ src_install() {
 	if use systemd; then
 		systemd_dounit "${FILESDIR}/${MY_PN}.service"
 	else
-		newinitd "${FILESDIR}/hqplayerd.init.d" "${MY_PN}"
+		newinitd "${FILESDIR}/${MY_PN}.init.d" "${MY_PN}"
 	fi
 }
 
