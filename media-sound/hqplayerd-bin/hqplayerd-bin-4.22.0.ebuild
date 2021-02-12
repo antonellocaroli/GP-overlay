@@ -34,7 +34,8 @@ RDEPEND=">=dev-libs/glib-2.37.3
 	>=dev-libs/libgee-0.20.2
 	>=dev-util/patchelf-0.10
 	>=net-libs/libsoup-2.62.3
-	>=media-sound/wavpack-5.3.2-r1"
+	>=media-sound/wavpack-5.3.2-r1
+	x11-libs/cairo"
 
 DEPEND="${RDEPEND}"
 
