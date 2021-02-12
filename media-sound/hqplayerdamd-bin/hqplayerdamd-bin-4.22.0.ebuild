@@ -71,7 +71,7 @@ src_install() {
 	if use systemd; then
 		systemd_dounit "${FILESDIR}/${MY_PN}.service"
 	else
-		newinitd "${FILESDIR}/${MY_PN}.init.d" "${MY_PN}"
+		newinitd "${FILESDIR}/hqplayerd.init.d" "${MY_PN}"
 	fi
 }
 
