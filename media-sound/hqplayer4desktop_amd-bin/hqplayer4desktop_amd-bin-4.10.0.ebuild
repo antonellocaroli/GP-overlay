@@ -49,7 +49,7 @@ src_unpack() {
 }
 
 src_prepare() {
-	patchelf --replace-needed libomp.so.5 libomp.so usr/bin/hqplayerd || die
+	patchelf --replace-needed libomp.so.5 libomp.so usr/bin/hqplayerd4desktop || die
 	rm -rf usr/bin/hqplayer4client
 	rm -rf usr/share/applications/hqplayer4-client.desktop
 	rm -rf usr/share/pixmaps/hqplayer4-client.png
