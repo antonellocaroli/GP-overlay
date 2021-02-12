@@ -15,7 +15,7 @@ SRC_URI="https://www.signalyst.eu/bins/hqplayerd/focal/hqplayerd_${PV}-62amd_amd
 
 LICENSE="Signalyst"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 RESTRICT="mirror bindist"
 
 IUSE="systemd"
