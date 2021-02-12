@@ -36,7 +36,8 @@ RDEPEND=">=sys-devel/gcc-5.1.0[openmp]
 	>=dev-qt/qtquickcontrols2-5.11.3
 	manual? ( app-text/evince )
 	client? ( media-sound/hqplayer4client-bin )
-	>=sys-libs/libomp-7.1.0"
+	>=sys-libs/libomp-7.1.0
+	>=dev-util/patchelf-0.10"
 
 DEPEND="${RDEPEND}"
 
@@ -48,6 +49,7 @@ src_unpack() {
 }
 
 src_prepare() {
+	patchelf --replace-needed libomp.so.5 libomp.so usr/bin/hqplayerd || die
 	rm -rf usr/bin/hqplayer4client
 	rm -rf usr/share/applications/hqplayer4-client.desktop
 	rm -rf usr/share/pixmaps/hqplayer4-client.png
