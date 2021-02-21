@@ -1,49 +1,56 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
-EAPI=6
+EAPI=7
 
-inherit unpacker
+PYTHON_COMPAT=( python3_{6,7,8} )
+inherit python-any-r1 unpacker xdg-utils
 
 MY_PN=${PN/-bin/}
 
-DESCRIPTION="Atom - A hackable text editor for the 21st Century"
+DESCRIPTION="A hackable text editor for the 21st Century"
 HOMEPAGE="https://atom.io/"
 SRC_URI="https://github.com/atom/atom/releases/download/v${PV}/${MY_PN}-amd64.deb"
 
-LICENSE="atom.io"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
-RESTRICT="mirror bindist"
+IUSE=""
 
-RDEPEND=">=dev-vcs/git-2.19.2
-	>=gnome-base/gconf-3.2.6-r4
-	>=x11-libs/gtk+-2.24.32-r1
-	>=virtual/libudev-215-r1
-	>=dev-libs/libgcrypt-1.8.3
-	>=x11-libs/libnotify-0.7.7-r1
-	>=x11-libs/libXtst-1.2.3-r1
-	>=dev-libs/nss-3.40.1-r1
-	>=dev-lang/python-3.5.5
-	>=gnome-base/gvfs-1.32.2
-	>=x11-misc/xdg-utils-1.1.1-r1
-	>=sys-libs/libcap-2.25
-	>=x11-misc/xcb-2.4-r1
-	>=x11-libs/libXv-1.0.11-r1
-	>=media-libs/alsa-lib-1.1.2
-	>=x11-libs/libxkbfile-1.0.9-r2
-	>=net-misc/curl-7.64.0"
-
-DEPEND="${RDEPEND}"
+DEPEND=""
+RDEPEND="!app-editors/atom
+	${PYTHON_DEPS}
+	dev-vcs/git
+	x11-libs/gtk+:3
+	virtual/libudev
+	dev-libs/libgcrypt
+	x11-libs/libnotify
+	x11-libs/libXtst
+	dev-libs/nss
+	gnome-base/gvfs
+	x11-misc/xdg-utils
+	sys-libs/libcap
+	x11-libs/libX11
+	x11-libs/libXScrnSaver
+	media-libs/alsa-lib
+	x11-libs/libxkbfile
+	net-misc/curl"
 
 S="${WORKDIR}"
-QA_PREBUILT="usr/bin/atom usr/bin/apm"
 
 src_unpack() {
-	unpack_deb ${A}
+	unpack_deb "atom-amd64.deb"
 }
 
 src_install() {
-	mv usr "${D}" || die
+	mv "${S}/usr/share/doc/atom" "${S}/usr/share/doc/${PF}"
+	cp -a "${S}/usr" "${D}/"
+}
+
+pkg_postinst() {
+	xdg_desktop_database_update
+}
+
+pkg_postrm() {
+	xdg_desktop_database_update
 }

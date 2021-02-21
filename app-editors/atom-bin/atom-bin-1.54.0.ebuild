@@ -1,4 +1,4 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -6,11 +6,9 @@ EAPI=7
 PYTHON_COMPAT=( python3_{6,7,8} )
 inherit python-any-r1 unpacker xdg-utils
 
-MY_PN=${PN/-bin/}
-
 DESCRIPTION="A hackable text editor for the 21st Century"
 HOMEPAGE="https://atom.io/"
-SRC_URI="https://github.com/atom/atom/releases/download/v${PV}/${MY_PN}-amd64.deb"
+SRC_URI="https://github.com/atom/atom/releases/download/v${PV}/atom-amd64.deb -> ${P}.deb"
 
 LICENSE="MIT"
 SLOT="0"
@@ -39,7 +37,7 @@ RDEPEND="!app-editors/atom
 S="${WORKDIR}"
 
 src_unpack() {
-	unpack_deb "atom-amd64.deb"
+	unpack_deb "${P}.deb"
 }
 
 src_install() {
