@@ -35,6 +35,6 @@ src_unpack() {
 	rpm_src_unpack ${A}
 }
 
-#src_install() {
-#	mv usr "${D}" || die
-#}
+src_install() {
+	mv usr "${D}" || die
+}
