@@ -1,17 +1,17 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 2021 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
-EAPI=6
 
-inherit unpacker user systemd
+EAPI=7
+
+inherit systemd rpm
 
 MY_PN=${PN/-bin/}
 
 DESCRIPTION="HQPlayer Embedded - upsampling multichannel audio player"
 HOMEPAGE="http://www.signalyst.com/consumer.html"
 SRC_URI="
-amd64? ( https://www.signalyst.eu/bins/hqplayerd/buster/${MY_PN}_${PV}-65_amd64.deb )
+amd64? ( https://www.signalyst.eu/bins/hqplayerd/fc30/${MY_PN}-${PV}-58.fc30.x86_64.rpm )
 arm64? ( https://www.signalyst.eu/bins/hqplayerd/buster/${MY_PN}_${PV}-65_arm64.deb )
 "
 
@@ -52,9 +52,9 @@ QA_PREBUILT="usr/bin/hqplayerd"
 #	fi
 #}
 
-src_unpack() {
-	unpack_deb ${A}
-}
+#src_unpack() {
+#	unpack_deb ${A}
+#}
 
 src_prepare() {
      default
