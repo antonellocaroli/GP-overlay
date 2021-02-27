@@ -65,7 +65,7 @@ src_prepare() {
 }
 
 src_install() {
-	mv etc lib usr var "${D}" || die
+	mv etc usr var "${D}" || die
 	rm "${D}usr/share/doc/hqplayerd/changelog.Debian.gz"
   if use arm64 ; then
   dosym "${ED%/}"/usr/lib64/libgupnp-1.2.so /usr/lib64/libgupnp-1.0.so.4
