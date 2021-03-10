@@ -12,7 +12,7 @@ DESCRIPTION="HQPlayer Embedded - upsampling multichannel audio player"
 HOMEPAGE="http://www.signalyst.com/consumer.html"
 SRC_URI="
 amd64? ( https://www.signalyst.eu/bins/hqplayerd/fc30/${MY_PN}-${PV}-59.fc30.x86_64.rpm )
-amd64? ( cpu_flags_x86_avx2? ( https://www.signalyst.eu/bins/hqplayerd/fc33/${MY_PN}-${PV}-59.fc33.x86_64.rpm ) )
+cpu_flags_x86_avx2? ( https://www.signalyst.eu/bins/hqplayerd/fc33/${MY_PN}-${PV}-59.fc33.x86_64.rpm )
 arm64? ( https://www.signalyst.eu/bins/hqplayerd/buster/${MY_PN}_${PV}-67_arm64.deb )
 "
 
