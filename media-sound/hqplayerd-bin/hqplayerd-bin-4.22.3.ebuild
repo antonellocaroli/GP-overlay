@@ -4,7 +4,7 @@
 
 EAPI=7
 
-inherit systemd rpm flag-o-matic
+inherit systemd rpm
 
 MY_PN=${PN/-bin/}
 
@@ -19,10 +19,9 @@ arm64? ( https://www.signalyst.eu/bins/hqplayerd/buster/${MY_PN}_${PV}-67_arm64.
 LICENSE="Signalyst"
 SLOT="0"
 KEYWORDS="~amd64 ~arch64"
-IUSE="cpu_flags_x86_avx2"
 RESTRICT="mirror bindist"
 
-IUSE="systemd"
+IUSE="systemd cpu_flags_x86_avx2"
 
 RDEPEND=">=dev-libs/glib-2.37.3
 	>=media-libs/libgmpris-2.2.1
