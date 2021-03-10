@@ -18,7 +18,7 @@ arm64? ( https://www.signalyst.eu/bins/hqplayerd/buster/${MY_PN}_${PV}-67_arm64.
 
 LICENSE="Signalyst"
 SLOT="0"
-KEYWORDS="~amd64 ~arch64"
+KEYWORDS="~amd64 ~arch64 cpu_flags_x86_avx2"
 IUSE="cpu_flags_x86_avx2"
 RESTRICT="mirror bindist"
 
