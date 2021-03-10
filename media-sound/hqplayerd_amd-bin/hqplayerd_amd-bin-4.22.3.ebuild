@@ -1,23 +1,21 @@
-# Copyright 2021 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
+EAPI=6
 
-EAPI=7
+inherit unpacker user systemd
 
-inherit systemd rpm
-
-MY_PN=${PN/-bin/}
+MY_PN=${PN/_amd-bin/}
 
 DESCRIPTION="HQPlayer Embedded - upsampling multichannel audio player"
 HOMEPAGE="http://www.signalyst.com/consumer.html"
-SRC_URI="
-amd64? ( https://www.signalyst.eu/bins/hqplayerd/fc30/${MY_PN}-${PV}-59.fc30.x86_64.rpm )
-arm64? ( https://www.signalyst.eu/bins/hqplayerd/buster/${MY_PN}_${PV}-67_arm64.deb )
-"
+SRC_URI="https://www.signalyst.eu/bins/hqplayerd/focal/${MY_PN}_${PV}-68amd_amd64.deb"
+#         https://www.signalyst.eu/bins/hqplayerd/focal/hqplayerd_4.22.0-62amd_amd64.deb
 
 LICENSE="Signalyst"
 SLOT="0"
-KEYWORDS="~amd64 ~arch64"
+KEYWORDS="~amd64"
 RESTRICT="mirror bindist"
 
 IUSE="systemd"
@@ -52,9 +50,9 @@ QA_PREBUILT="usr/bin/hqplayerd"
 #	fi
 #}
 
-#src_unpack() {
-#	unpack_deb ${A}
-#}
+src_unpack() {
+	unpack_deb ${A}
+}
 
 src_prepare() {
      default
@@ -65,7 +63,7 @@ src_prepare() {
 }
 
 src_install() {
-	mv etc usr var "${D}" || die
+	mv etc lib usr var "${D}" || die
 	rm "${D}usr/share/doc/hqplayerd/changelog.Debian.gz"
   if use arm64 ; then
   dosym "${ED%/}"/usr/lib64/libgupnp-1.2.so /usr/lib64/libgupnp-1.0.so.4
