@@ -10,14 +10,16 @@ MY_PN=${PN/-bin/}
 
 DESCRIPTION="HQPlayer - upsampling multichannel audio player"
 HOMEPAGE="http://www.signalyst.com/consumer.html"
-SRC_URI="http://www.signalyst.eu/bins/hqplayer/focal/${MY_PN}_${PV}-37_amd64.deb"
-#https://www.signalyst.eu/bins/hqplayer/bionic/hqplayer4desktop_4.4.0-19_amd64.deb
+SRC_URI="
+amd64? ( !cpu_flags_x86_avx2? ( http://www.signalyst.eu/bins/hqplayer/focal/${MY_PN}_${PV}-37_amd64.deb ) )
+amd64? ( cpu_flags_x86_avx2? ( http://www.signalyst.eu/bins/hqplayer/focal/${MY_PN}_${PV}-38amd_amd64.deb ) )
+"
 
 LICENSE="Signalyst"
 SLOT="0"
 KEYWORDS="~amd64"
 RESTRICT="mirror bindist"
-IUSE="manual client"
+IUSE="manual client cpu_flags_x86_avx2"
 
 RDEPEND=">=sys-devel/gcc-5.1.0[openmp]
 	>=media-libs/alsa-lib-1.0.16
