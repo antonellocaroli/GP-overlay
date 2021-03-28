@@ -1,0 +1,12 @@
+diff --git a/options.c b/options.c
+index 93b1c35..33fbfae 100644
+--- a/options.c
++++ b/options.c
+@@ -289,7 +289,7 @@ static void set_buffer_seconds(void *data, const char *buf)
+ {
+        int sec;
+
+-       if (parse_int(buf, 1, 300, &sec))
++       if (parse_int(buf, 1, 1200, &sec))
+                player_set_buffer_chunks((sec * SECOND_SIZE + CHUNK_SIZE / 2) / CHUNK_SIZE);
+ }
