@@ -1,9 +1,9 @@
 # Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 
-inherit bash-completion-r1 toolchain-funcs eutils user
+inherit bash-completion-r1 toolchain-funcs
 
 if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="https://github.com/cmus/cmus.git"
@@ -65,15 +65,12 @@ REQUIRED_USE="tremor? ( vorbis )
 
 DOCS=( AUTHORS README.md )
 
-S="${WORKDIR}/${P/_/-}"
-
-src_prepare () {
-	# Apply patches
-	epatch "${FILESDIR}/${P}-buffer.patch"
+src_prepare() {
+	eapply "${FILESDIR}/${P}-buffer.patch"
 	eapply_user
 }
 
-
+S="${WORKDIR}/${P/_/-}"
 
 src_configure() {
 	my_config() {
@@ -126,9 +123,6 @@ src_configure() {
 		exampledir="${EPREFIX}"/usr/share/doc/${PF}/examples \
 		libdir="${EPREFIX}"/usr/$(get_libdir) DEBUG=${debuglevel} || die
 }
-
-
-
 
 src_compile() {
 	tc-export_build_env BUILD_CC
