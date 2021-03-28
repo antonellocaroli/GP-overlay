@@ -69,7 +69,7 @@ S="${WORKDIR}/${P/_/-}"
 
 src_prepare () {
 	# Apply patches
-	epatch "${FILESDIR}/${P}-buffer.patch"
+	epatch "${FILESDIR}/${PN}-buffer.patch"
 	eapply_user
 }
 
