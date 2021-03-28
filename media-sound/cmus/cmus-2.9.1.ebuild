@@ -66,7 +66,7 @@ REQUIRED_USE="tremor? ( vorbis )
 DOCS=( AUTHORS README.md )
 
 src_prepare() {
-	eapply "${FILESDIR}/${PV}-buffer.patch"
+	eapply "${FILESDIR}/${P}-buffer.patch"
 	eapply_user
 }
 
