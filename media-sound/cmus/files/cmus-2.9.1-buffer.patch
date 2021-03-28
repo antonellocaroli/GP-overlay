@@ -1,5 +1,5 @@
 diff --git a/options.c b/options.c
-index 93b1c35..2cfee63 100644
+index 93b1c35..33fbfae 100644
 --- a/options.c
 +++ b/options.c
 @@ -289,7 +289,7 @@ static void set_buffer_seconds(void *data, const char *buf)
