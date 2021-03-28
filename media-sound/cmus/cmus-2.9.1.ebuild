@@ -5,13 +5,10 @@ EAPI=6
 
 inherit bash-completion-r1 toolchain-funcs eutils user
 
-if [[ ${PV} == "9999" ]] ; then
-	EGIT_REPO_URI="https://github.com/cmus/cmus.git"
-	inherit git-r3
-else
-	SRC_URI="https://github.com/cmus/cmus/archive/v${PV/_/-}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
-fi
+
+SRC_URI="https://github.com/cmus/cmus/archive/v${PV/_/-}.tar.gz -> ${P}.tar.gz"
+KEYWORDS="amd64 arm64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
+
 
 DESCRIPTION="Ncurses based music player with plugin support for many formats"
 HOMEPAGE="https://cmus.github.io/"
