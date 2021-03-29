@@ -7,6 +7,6 @@ index 93b1c35..2cfee63 100644
  	int sec;
 
 -	if (parse_int(buf, 1, 300, &sec))
-+	if (parse_int(buf, 1, 2400, &sec))
++	if (parse_int(buf, 1, 3600, &sec))
  		player_set_buffer_chunks((sec * SECOND_SIZE + CHUNK_SIZE / 2) / CHUNK_SIZE);
  }
