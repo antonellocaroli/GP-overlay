@@ -45,7 +45,7 @@ DEPEND="${RDEPEND}
 	app-arch/xz-utils
 	virtual/pkgconfig"
 
-S=${WORKDIR}/${MY_P}
+#S=${WORKDIR}/${MY_P}
 
 src_configure() {
 	local myconf=(
