@@ -47,9 +47,9 @@ DEPEND="${RDEPEND}
 
 #S=${WORKDIR}/${MY_P}
 
-PATCHES=(
-	"${FILESDIR}/${P}-stdint_uint_types.patch"
-)
+#PATCHES=(
+#	"${FILESDIR}/${P}-stdint_uint_types.patch"
+#)
 
 src_configure() {
 	local myconf=(
