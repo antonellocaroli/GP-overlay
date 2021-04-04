@@ -61,14 +61,14 @@ DEPEND="${RDEPEND}
 "
 
 #S=${WORKDIR}/${MY_P}
-PATCHES=(
-	"${FILESDIR}/ffmpeg4.patch"
-	"${FILESDIR}/${P}-stdint_uint_types.patch"
-)
+#PATCHES=(
+#	"${FILESDIR}/ffmpeg4.patch"
+#	"${FILESDIR}/${P}-stdint_uint_types.patch"
+#)
 
-PATCHES=(
-	"${FILESDIR}/${P}-stdint_uint_types.patch"
-)
+#PATCHES=(
+#	"${FILESDIR}/${P}-stdint_uint_types.patch"
+#)
 
 src_prepare() {
 	default
