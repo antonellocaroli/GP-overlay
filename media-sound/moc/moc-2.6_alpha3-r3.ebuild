@@ -8,8 +8,8 @@ inherit autotools git-r3
 MY_P=${PN}-${PV/_/-}
 DESCRIPTION="Music On Console - ncurses interface for playing audio files"
 HOMEPAGE="https://moc.daper.net"
-EGIT_REPO_URI="https://github.com/jonsafari/mocp.git"
-EGIT_COMMIT="caf70dcf1d5e6283e0e9a7082fa5d141cc62f4e7"
+EGIT_REPO_URI="https://github.com/antonellocaroli/mocp1.git"
+EGIT_COMMIT="ed73fb31b251abc97ac48702a6fd7b827e2403e7"
 
 LICENSE="GPL-2"
 SLOT="0"
