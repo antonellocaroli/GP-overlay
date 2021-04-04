@@ -3,12 +3,13 @@
 
 EAPI=7
 
-inherit autotools
+inherit autotools git-r3
 
 MY_P=${P/_/-}
 DESCRIPTION="Music On Console - ncurses interface for playing audio files"
 HOMEPAGE="https://moc.daper.net"
-SRC_URI="http://ftp.daper.net/pub/soft/moc/stable/${MY_P}.tar.bz2"
+EGIT_REPO_URI="https://github.com/antonellocaroli/mocp.git"
+EGIT_COMMIT="f314521915bbe8a58a6549b9c72d67b2f6ab93b1"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -44,11 +45,7 @@ DEPEND="${RDEPEND}
 	app-arch/xz-utils
 	virtual/pkgconfig"
 
-S=${WORKDIR}/${MY_P}
-
-PATCHES=(
-	"${FILESDIR}/ffmpeg4.patch"
-)
+#S=${WORKDIR}/${MY_P}
 
 src_configure() {
 	local myconf=(
