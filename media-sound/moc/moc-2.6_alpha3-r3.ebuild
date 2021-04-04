@@ -66,9 +66,9 @@ DEPEND="${RDEPEND}
 #	"${FILESDIR}/${P}-stdint_uint_types.patch"
 #)
 
-#PATCHES=(
-#	"${FILESDIR}/${P}-stdint_uint_types.patch"
-#)
+PATCHES=(
+	"${FILESDIR}/${P}-stdint_uint_types.patch"
+)
 
 src_prepare() {
 	default
