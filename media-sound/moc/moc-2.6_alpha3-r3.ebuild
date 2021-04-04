@@ -9,7 +9,7 @@ MY_P=${PN}-${PV/_/-}
 DESCRIPTION="Music On Console - ncurses interface for playing audio files"
 HOMEPAGE="https://moc.daper.net"
 EGIT_REPO_URI="https://github.com/jonsafari/mocp.git"
-EGIT_COMMIT="e7c70bb1f233c5e57c97b4fa2e739d29d6b065b2"
+EGIT_COMMIT="caf70dcf1d5e6283e0e9a7082fa5d141cc62f4e7"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -60,7 +60,7 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 "
 
-#S=${WORKDIR}/${MY_P}
+S=${WORKDIR}/${MY_P}
 PATCHES=(
 	"${FILESDIR}/ffmpeg4.patch"
 	"${FILESDIR}/${P}-stdint_uint_types.patch"
