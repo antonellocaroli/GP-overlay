@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit autotools
+inherit autotools git-r3
 
 MY_P=${P/_/-}
 DESCRIPTION="Music On Console - ncurses interface for playing audio files"
