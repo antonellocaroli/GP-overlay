@@ -60,7 +60,8 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 "
 
-S=${WORKDIR}/${MY_P}
+#S=${WORKDIR}/${MY_P}
+
 PATCHES=(
 	"${FILESDIR}/ffmpeg4.patch"
 	"${FILESDIR}/${P}-stdint_uint_types.patch"
