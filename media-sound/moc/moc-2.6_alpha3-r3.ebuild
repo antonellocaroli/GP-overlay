@@ -9,7 +9,7 @@ MY_P=${PN}-${PV/_/-}
 DESCRIPTION="Music On Console - ncurses interface for playing audio files"
 HOMEPAGE="https://moc.daper.net"
 EGIT_REPO_URI="https://github.com/jonsafari/mocp.git"
-EGIT_COMMIT="6b9fec651b362e8ab076a5faf2f6366e6579328a"
+EGIT_COMMIT="48b48e593690ef0c398d5e33dc119b0a4fc73a2b"
 
 LICENSE="GPL-2"
 SLOT="0"
