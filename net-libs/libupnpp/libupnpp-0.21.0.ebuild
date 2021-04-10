@@ -12,7 +12,7 @@ KEYWORDS="amd64 x86"
 
 DEPEND="
 	dev-libs/expat
-	>=net-libs/libnpupnp-4.0.14-r1
+	>=net-libs/libnpupnp-4.1.3
 	net-misc/curl
 "
 RDEPEND="${DEPEND}"
