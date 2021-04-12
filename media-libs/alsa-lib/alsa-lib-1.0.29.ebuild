@@ -1,7 +1,7 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
+EAPI=6
 
 # no support for python3_2 or above yet wrt #471326
 PYTHON_COMPAT=( python3_{7,8} )
