@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="amd64 arm64"
 
 PATCHES=(
-	"${FILESDIR}/${P}-buffer.patch"
+	"${FILESDIR}/${P}.patch"
 )
 
 src_install() {
