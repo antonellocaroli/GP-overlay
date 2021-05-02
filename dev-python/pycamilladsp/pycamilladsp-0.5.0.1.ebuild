@@ -18,6 +18,6 @@ SLOT="0"
 KEYWORDS="amd64 arm64"
 
 
-RDEPEND="dev-python/websockets
+RDEPEND="dev-python/websocket-client
 dev-python/pyyaml"
 DEPEND="${RDEPEND}"

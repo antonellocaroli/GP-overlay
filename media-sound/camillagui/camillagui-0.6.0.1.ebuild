@@ -19,7 +19,7 @@ RESTRICT="mirror bindist"
 
 IUSE="systemd"
 
-RDEPEND="dev-python/websockets
+RDEPEND="dev-python/websocket-client
 dev-python/aiohttp
 dev-python/matplotlib
 dev-python/numpy
