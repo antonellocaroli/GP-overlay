@@ -17,6 +17,10 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="amd64 arm64"
 
+PATCHES=(
+	"${FILESDIR}/${P}-buffer.patch"
+)
+
 src_install() {
 	default
 }
