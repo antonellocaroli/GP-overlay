@@ -6,7 +6,7 @@ EAPI=7
 inherit unpacker eutils user
 
 
-DESCRIPTION="Tool to create audio processing pipelines for applications such as active crossovers or room correction"
+DESCRIPTION="This is the server part of CamillaGUI, a web-based GUI for CamillaDSP"
 HOMEPAGE="https://github.com/HEnquist/camillagui-backend"
 SRC_URI="https://github.com/antonellocaroli/${PN}/releases/download/${PN}-${PV}/${PN}-${PV}.tar.gz"
 
