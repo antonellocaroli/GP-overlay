@@ -14,7 +14,7 @@ SRC_URI="https://github.com/antonellocaroli/${PN}/releases/download/${PN}-${PV}/
 LICENSE="GPL-3"
 
 SLOT="0"
-KEYWORDS="~amd64 ~arm64 ~arm"
+KEYWORDS="amd64 arm64"
 RESTRICT="mirror bindist"
 
 IUSE="systemd"

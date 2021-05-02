@@ -15,7 +15,7 @@ EGIT_COMMIT="8b64c91411f97d1db9ec5718f40e220ce60f5ec8"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~arm64"
+KEYWORDS="amd64 arm64"
 
 
 RDEPEND="dev-python/websockets

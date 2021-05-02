@@ -15,7 +15,7 @@ EGIT_COMMIT="af3e3bcaf17243d9eec8b81bf8783f84e0183416"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~arm64"
+KEYWORDS="amd64 arm64"
 
 
 RDEPEND="dev-python/jsonschema
