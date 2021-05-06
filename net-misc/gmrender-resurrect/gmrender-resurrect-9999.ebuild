@@ -10,7 +10,7 @@ DESCRIPTION="Resource efficient UPnP/DLNA renderer"
 HOMEPAGE="https://github.com/hzeller/gmrender-resurrect"
 EGIT_REPO_URI="https://github.com/hzeller/gmrender-resurrect.git"
 
-LICENSE="GPL"
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
 IUSE=""
