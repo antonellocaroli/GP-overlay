@@ -23,6 +23,7 @@ DEPEND="
   media-libs/gst-plugins-good:1.0
   media-libs/gst-plugins-bad:1.0
   media-libs/gst-plugins-ugly:1.0
+  media-plugins/gst-plugins-soup:1.0
   media-plugins/gst-plugins-libav:1.0
 "
 RDEPEND="${DEPEND}"
