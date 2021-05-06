@@ -19,9 +19,15 @@ DEPEND="
 	net-libs/libupnp
 	dev-libs/glib:2
 	media-libs/gstreamer:1.0
+  media-plugins/gst-plugins-libav:1.0
 "
 RDEPEND="${DEPEND}"
 
 src_prepare() {
 	eautoreconf
+}
+
+src_install() {
+	newconfd "${FILESDIR}/gmediarender.conf.d" "gmediarender"
+	newinitd "${FILESDIR}/gmediarender.init.d" "gmediarender"
 }
