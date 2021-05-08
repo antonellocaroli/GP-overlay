@@ -24,8 +24,7 @@ dev-python/aiohttp
 dev-python/matplotlib
 dev-python/numpy
 dev-python/pycamilladsp
-dev-python/pycamilladsp-plot
-media-sound/camilladsp"
+dev-python/pycamilladsp-plot"
 
 DEPEND="${RDEPEND}"
 
