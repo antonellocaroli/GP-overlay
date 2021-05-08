@@ -10,7 +10,7 @@ inherit distutils-r1 git-r3
 DESCRIPTION="This is an ALSA I/O plugin for use with CamillaDSP for audio playback"
 HOMEPAGE="https://github.com/scripple/alsa_cdsp"
 
-EGIT_REPO_URI="https://github.com/scripple/alsa_cdsp"
+EGIT_REPO_URI="https://github.com/scripple/alsa_cdsp.git"
 EGIT_COMMIT="bbf06dd941b9225aa1f675acdbdf75a2b1516046"
 
 LICENSE="MIT"
