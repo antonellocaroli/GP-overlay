@@ -21,9 +21,9 @@ KEYWORDS="amd64 arm64"
 RDEPEND=""
 DEPEND="${RDEPEND}"
 
-PATCHES=(
-	"${FILESDIR}/${P}.patch"
-)
+#PATCHES=(
+#	"${FILESDIR}/${P}.patch"
+#)
 #src_prepare() {
 #  default
 #}
