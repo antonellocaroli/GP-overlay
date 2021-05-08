@@ -21,13 +21,14 @@ KEYWORDS="amd64 arm64"
 RDEPEND=""
 DEPEND="${RDEPEND}"
 
-#PATCHES=(
-#	"${FILESDIR}/${P}.patch"
-#)
-src_prepare() {
-  default
-}
+PATCHES=(
+	"${FILESDIR}/${P}.patch"
+)
+#src_prepare() {
+#  default
+#}
 
 src_install() {
-  make DESTDIR=${D} install || die "Install Failed"
+  dodir /usr/lib64/alsa-lib
+  default
 }
