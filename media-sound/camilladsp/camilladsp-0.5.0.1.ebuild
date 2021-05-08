@@ -21,7 +21,7 @@ KEYWORDS="amd64 arm64"
 RESTRICT="mirror bindist"
 IUSE=""
 
-DEPEND=""
+DEPEND="media-libs/alsa-cdsp"
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
