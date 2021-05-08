@@ -29,6 +29,6 @@ PATCHES=(
 #}
 
 src_install() {
-  dodir /usr/lib64/alsa-lib
+  dodir "/usr/lib64/alsa-lib"
   default
 }
