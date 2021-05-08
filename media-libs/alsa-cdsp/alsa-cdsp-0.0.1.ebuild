@@ -21,17 +21,18 @@ KEYWORDS="amd64 arm64"
 RDEPEND=""
 DEPEND="${RDEPEND}"
 
-#PATCHES=(
-#	"${FILESDIR}/${P}.patch"
-#)
+PATCHES=(
+	"${FILESDIR}/${P}.patch"
+)
 #src_prepare() {
 #  default
 #}
 
-src_compile() {
-    default
-}
+#src_compile() {
+#    default
+#}
 
 src_install() {
+     keepdir "/usr/lib64/alsa-lib/"
      emake install DESTDIR=${D}
 }
