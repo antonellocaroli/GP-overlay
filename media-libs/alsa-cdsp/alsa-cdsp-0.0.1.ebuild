@@ -24,10 +24,10 @@ DEPEND="${RDEPEND}"
 #PATCHES=(
 #	"${FILESDIR}/${P}.patch"
 #)
-
+src_prepare() {
+  default
+}
 
 src_install() {
-  insinto "/usr/lib64/"
-  insopts -m644
-  default
+  make DESTDIR=${D} install || die "Install Failed"
 }
