@@ -40,5 +40,5 @@ src_install() {
     local mypath=/usr/lib64/alsa-lib
 
     insinto "${mypath}"
-    dolib libasound_module_pcm_cdsp.so
+    doins libasound_module_pcm_cdsp.so
 }
