@@ -24,15 +24,21 @@ DEPEND="${RDEPEND}"
 PATCHES=(
 	"${FILESDIR}/${P}.patch"
 )
-#src_prepare() {
-#  default
-#}
+src_prepare() {
+  default
+}
 
 #src_compile() {
 #    default
 #}
 
+#src_install() {
+#     keepdir "/usr/lib64/alsa-lib/"
+#     emake install DESTDIR=${D}
+#}
 src_install() {
-     keepdir "/usr/lib64/alsa-lib/"
-     emake install DESTDIR=${D}
+    local mypath=/usr/lib64/alsa-lib
+
+    insinto "${mypath}"
+    dolib libasound_module_pcm_cdsp.so
 }
