@@ -28,7 +28,10 @@ PATCHES=(
 #  default
 #}
 
+src_compile() {
+    default
+}
+
 src_install() {
-  dodir "/usr/lib64/alsa-lib"
-  default
+     emake install DESTDIR=${D}
 }
