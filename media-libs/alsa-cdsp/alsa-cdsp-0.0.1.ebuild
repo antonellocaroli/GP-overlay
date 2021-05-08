@@ -3,8 +3,6 @@
 
 EAPI=7
 
-PYTHON_COMPAT=( python3_{6,7,8} )
-
 inherit git-r3
 
 DESCRIPTION="This is an ALSA I/O plugin for use with CamillaDSP for audio playback"
@@ -41,4 +39,6 @@ src_install() {
 
     insinto "${mypath}"
     doins libasound_module_pcm_cdsp.so
+    insinto /etc/alsa/conf.d
+    newins "${FILESDIR}"/camilladsp.conf camilladsp.conf
 }

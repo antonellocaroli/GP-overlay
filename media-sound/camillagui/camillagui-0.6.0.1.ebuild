@@ -43,6 +43,4 @@ src_install() {
   else
       newinitd "${FILESDIR}/camillagui.init.d" "camillagui"
   fi
-  insinto /etc/alsa/conf.d
-  newins "${FILESDIR}"/camilladsp.conf camilladsp.conf
 }
