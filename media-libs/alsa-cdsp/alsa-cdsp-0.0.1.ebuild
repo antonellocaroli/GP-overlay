@@ -28,6 +28,6 @@ DEPEND="${RDEPEND}"
 
 src_install() {
   insinto "/usr/lib64/"
-  insopts -m755
+  insopts -m644
   default
 }
