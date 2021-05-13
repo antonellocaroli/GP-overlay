@@ -6,19 +6,15 @@ EAPI=7
 
 inherit systemd unpacker
 
-MY_PN=${PN/-bin/}
+MY_PN=${PN/-bin-arm64/}
 
 DESCRIPTION="HQPlayer Embedded - upsampling multichannel audio player"
 HOMEPAGE="http://www.signalyst.com/consumer.html"
-SRC_URI="
-amd64? ( !cpu_flags_x86_avx2? ( https://www.signalyst.eu/bins/hqplayerd/fc30/${MY_PN}-${PV}-59.fc30.x86_64.rpm ) )
-amd64? ( cpu_flags_x86_avx2? ( https://www.signalyst.eu/bins/hqplayerd/fc33/${MY_PN}-${PV}-59.fc33.x86_64.rpm ) )
-arm64? ( https://www.signalyst.eu/bins/hqplayerd/buster/${MY_PN}_${PV}-67_arm64.deb )
-"
+SRC_URI="https://www.signalyst.eu/bins/hqplayerd/buster/${MY_PN}_${PV}-67_arm64.deb"
 
 LICENSE="Signalyst"
 SLOT="0"
-KEYWORDS="~amd64 ~arch64"
+KEYWORDS="~amd64"
 RESTRICT="mirror bindist"
 
 IUSE="systemd cpu_flags_x86_avx2"
@@ -53,18 +49,9 @@ QA_PREBUILT="usr/bin/hqplayerd"
 #	fi
 #}
 
-src_unpack() {
-	if use amd64 ; then
-  rpm_src_unpack ${A}
-  fi
-}
-
 src_prepare() {
      default
        patchelf --replace-needed libomp.so.5 libomp.so usr/bin/hqplayerd || die
-       if use amd64 ; then
-       patchelf --replace-needed libgupnp-1.0.so.4 libgupnp-1.2.so.0 usr/bin/hqplayerd || die
-       fi
 }
 
 src_install() {
