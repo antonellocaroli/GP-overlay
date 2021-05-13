@@ -4,7 +4,7 @@
 
 EAPI=7
 
-inherit systemd rpm unpacker
+inherit systemd unpacker
 
 MY_PN=${PN/-bin/}
 
@@ -53,9 +53,11 @@ QA_PREBUILT="usr/bin/hqplayerd"
 #	fi
 #}
 
-#src_unpack() {
-#	unpack_deb ${A}
-#}
+src_unpack() {
+	if use amd64 ; then
+  rpm_src_unpack ${A}
+  fi
+}
 
 src_prepare() {
      default
