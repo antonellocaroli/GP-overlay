@@ -4,7 +4,7 @@
 
 EAPI=7
 
-inherit systemd rpm
+inherit systemd unpacker
 
 MY_PN=${PN/-bin/}
 
