@@ -11,8 +11,8 @@ MY_PN=${PN/-bin/}
 DESCRIPTION="HQPlayer Embedded - upsampling multichannel audio player"
 HOMEPAGE="http://www.signalyst.com/consumer.html"
 SRC_URI="
-amd64? ( !cpu_flags_x86_avx2? ( https://www.signalyst.eu/bins/hqplayerd/focal/${MY_PN}_${PV}-69_amd64.deb ) )
-amd64? ( cpu_flags_x86_avx2? ( https://www.signalyst.eu/bins/hqplayerd/focal/${MY_PN}_${PV}-70amd_amd64.deb ) )
+amd64? ( !cpu_flags_x86_avx2? ( https://www.signalyst.eu/bins/hqplayerd/fc30/${MY_PN}-${PV}-60.fc30.x86_64.rpm ) )
+amd64? ( cpu_flags_x86_avx2? ( https://www.signalyst.eu/bins/hqplayerd/fc33/${MY_PN}-${PV}-60.fc33.x86_64.rpm ) )
 "
 
 LICENSE="Signalyst"
