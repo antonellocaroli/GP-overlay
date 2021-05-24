@@ -30,7 +30,7 @@ S="${WORKDIR}"
 
 src_install() {
     dobin camilladsp
-    local mypath=/usr/lib64/alsa-lib
+    local mypath=/etc/alsa/conf.d
     insinto "${mypath}"
     newins "${FILESDIR}"/camilladsp.conf camilladsp.conf
 }
