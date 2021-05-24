@@ -30,4 +30,6 @@ S="${WORKDIR}"
 
 src_install() {
     dobin camilladsp
+    insinto /etc/alsa/conf.d
+    newins "${FILESDIR}"/camilladsp.conf camilladsp.conf
 }
