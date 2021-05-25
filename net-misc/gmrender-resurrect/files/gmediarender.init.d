@@ -21,7 +21,7 @@ pidfile=/run/gmediarender.pid
 #need net
 depend() {
     use alsasound
-    after bootmisc
+    after bootmisc net*
 }
 
 start_pre() {
