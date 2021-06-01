@@ -3,7 +3,7 @@
 
 EAPI=6
 
-PYTHON_COMPAT=( python3_{5,6,7} )
+PYTHON_COMPAT=( python3_{5,6,7,8,9} )
 DISTUTILS_SINGLE_IMPL=1
 DISABLE_AUTOFORMATTING=true
 inherit distutils-r1 gnome2-utils readme.gentoo-r1 xdg-utils
