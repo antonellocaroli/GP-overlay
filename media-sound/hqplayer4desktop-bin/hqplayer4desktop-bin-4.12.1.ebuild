@@ -35,6 +35,7 @@ RDEPEND=">=sys-devel/gcc-5.1.0[openmp]
 	>=dev-qt/qtcharts-5.15.1
 	>=net-libs/libmicrohttpd-0.9.62
 	>=dev-qt/qtquickcontrols2-5.11.3
+	>=dev-util/patchelf-0.10
 	manual? ( app-text/evince )
 	client? ( media-sound/hqplayer4client-bin )"
 
