@@ -42,7 +42,7 @@ RDEPEND=">=sys-devel/gcc-5.1.0[openmp]
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}"
-QA_PREBUILT="usr/bin/hqp-control2 usr/bin/hqplayer4client usr/bin/haqplayer4desktop"
+QA_PREBUILT="usr/bin/hqp-control2 usr/bin/hqplayer4client usr/bin/hqplayer4desktop"
 
 src_unpack() {
 	unpack_deb ${A}
@@ -54,7 +54,7 @@ src_prepare() {
 	rm -rf usr/share/pixmaps/hqplayer4-client.png
 	default
 	if use cpu_flags_x86_avx2 ; then
-		patchelf --replace-needed libomp.so.5 libomp.so usr/bin/haqplayer4desktop || die
+		patchelf --replace-needed libomp.so.5 libomp.so usr/bin/hqplayer4desktop || die
 	fi
 }
 
