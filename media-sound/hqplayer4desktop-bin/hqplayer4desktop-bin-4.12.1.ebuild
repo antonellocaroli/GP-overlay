@@ -53,7 +53,7 @@ src_prepare() {
 	rm -rf usr/share/pixmaps/hqplayer4-client.png
 	default
 	if use cpu_flags_x86_avx2 ; then
-		patchelf --replace-needed libomp.so.5 libomp.so usr/bin/hqplayerd || die
+		patchelf --replace-needed libomp.so.5 libomp.so usr/bin/haqplayer4desktop || die
 	fi
 }
 
