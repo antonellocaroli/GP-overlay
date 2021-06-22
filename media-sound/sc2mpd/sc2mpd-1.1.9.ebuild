@@ -88,5 +88,5 @@ src_compile() {
 
 	cd "${S}" || die "Failed to cd to source directory"
 	einfo "Building sc2mpd"
-	emake
+	make
 }
