@@ -34,7 +34,7 @@ src_unpack() {
 }
 
 src_configure() {
-	econf "--with-openhome=${WORKDIR}/openhome"
+	econf "--with-openhome=${WORKDIR}/openhome" || die "bu0"
 }
 
 src_compile() {
