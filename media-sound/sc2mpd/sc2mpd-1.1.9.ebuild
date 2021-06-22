@@ -43,7 +43,7 @@ src_compile() {
 	# build_ohNet
 	cd "${WORKDIR}/openhome/ohNet" || die "Couldn't cd to ohNet dir"
 	einfo "Building ohnet"
-	emake native_only=yes
+	emake native_only=yes || die "bu"
 
 	# build_ohNetGenerated
 	cd "${WORKDIR}/openhome/ohNetGenerated" || die "Couldn't cd to ohNetGenerated dir"
@@ -70,7 +70,7 @@ src_compile() {
 
 	cd "${WORKDIR}/openhome/ohNetGenerated" || die "Couldn't cd later to ohNetGenerated dir"
 	einfo "Building ohnetgenerated"
-	emake native_only=yes
+	emake native_only=yes  || die "bu1"
 
 	cd "Build/Include" || die "Couldn't cd later to include"
 	cp -R * "$ohnet/Build/Include" || die "Couldn't cp generated includes"
@@ -83,11 +83,11 @@ src_compile() {
 	# build_ohSongcast
 	cd "${WORKDIR}/openhome/ohSongcast" || die "Couldn't cd to ohSongcast dir"
 	einfo "Building ohSongcast"
-	emake release=1 library_static
+	emake release=1 library_static  || die "bu2"
 
 	#### End ohbuild.sh reverse engineer
 
 	cd "${S}" || die "Failed to cd to source directory"
 	einfo "Building sc2mpd"
-	emake
+	emake || die "bu3"
 }
