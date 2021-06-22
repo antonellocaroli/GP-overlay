@@ -22,7 +22,7 @@ DEPEND="
 	media-libs/alsa-lib
 	media-libs/libsamplerate
 	media-libs/libmpdclient
-	<=net-libs/libmicrohttpd-0.9.70
+	net-libs/libmicrohttpd
 "
 RDEPEND="${DEPEND}"
 
