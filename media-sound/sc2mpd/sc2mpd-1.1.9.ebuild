@@ -43,7 +43,7 @@ src_compile() {
 	# build_ohNet
 	cd "${WORKDIR}/openhome/ohNet" || die "Couldn't cd to ohNet dir"
 	einfo "Building ohnet"
-	emake native_only=yes
+	emake
 
 	# build_ohNetGenerated
 	cd "${WORKDIR}/openhome/ohNetGenerated" || die "Couldn't cd to ohNetGenerated dir"
