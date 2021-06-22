@@ -38,6 +38,7 @@ src_configure() {
 }
 
 src_compile() {
+	default
 	#### Begin ohbuild.sh reverse engineer
 
 	# build_ohNet
