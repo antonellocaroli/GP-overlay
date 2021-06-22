@@ -69,7 +69,7 @@ src_compile() {
 
 	cd "${WORKDIR}/openhome/ohNetGenerated" || die "Couldn't cd later to ohNetGenerated dir"
 	einfo "Building ohnetgenerated"
-	emake native_only=yes
+	make native_only=yes
 
 	cd "Build/Include" || die "Couldn't cd later to include"
 	cp -R * "$ohnet/Build/Include" || die "Couldn't cp generated includes"
@@ -82,7 +82,7 @@ src_compile() {
 	# build_ohSongcast
 	cd "${WORKDIR}/openhome/ohSongcast" || die "Couldn't cd to ohSongcast dir"
 	einfo "Building ohSongcast"
-	emake release=1 library_static
+	make release=1 library_static
 
 	#### End ohbuild.sh reverse engineer
 
