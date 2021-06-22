@@ -38,12 +38,11 @@ src_configure() {
 }
 
 src_compile() {
-	default
 	#### Begin ohbuild.sh reverse engineer
 
 	# build_ohNet
 	cd "${WORKDIR}/openhome/ohNet" || die "Couldn't cd to ohNet dir"
-	emake native_only=yes
+	make native_only=yes
 
 	# build_ohNetGenerated
 	cd "${WORKDIR}/openhome/ohNetGenerated" || die "Couldn't cd to ohNetGenerated dir"
