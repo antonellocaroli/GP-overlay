@@ -9,7 +9,7 @@ HOMEPAGE="https://www.lesbonscomptes.com/upmpdcli/index.html"
 openhome_packageversion="20210305"
 
 SRC_URI="
-	https://www.lesbonscomptes.com/upmpdcli/downloads/${P}.tar.gz
+	https://github.com/antonellocaroli/kernel-test/releases/download/sc2mpd-1.1.9/${P}.tar.gz
 	https://www.lesbonscomptes.com/upmpdcli/downloads/openhome-sc2-${openhome_packageversion}.tar.gz
 "
 
