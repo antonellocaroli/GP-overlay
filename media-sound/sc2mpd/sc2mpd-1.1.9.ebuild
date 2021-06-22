@@ -83,7 +83,7 @@ src_compile() {
 	# build_ohSongcast
 	cd "${WORKDIR}/openhome/ohSongcast" || die "Couldn't cd to ohSongcast dir"
 	einfo "Building ohSongcast"
-	emake
+	emake release=1 library_static
 
 	#### End ohbuild.sh reverse engineer
 
