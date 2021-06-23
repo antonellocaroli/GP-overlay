@@ -1,10 +1,12 @@
---- Slim/Player/Playlist.pm.orig	2012-05-29 13:43:52.000000000 +0100
-+++ Slim/Player/Playlist.pm	2012-05-29 13:43:52.000000000 +0100
-@@ -1124,7 +1124,7 @@
- 	$id =~ s/://g;
+diff --git a/Playlist.pm b/Playlist.pm
+index f45a577..e3ff25c 100644
+--- a/Playlist.pm
++++ b/Playlist.pm
+@@ -1189,7 +1189,7 @@ sub _playlistUrlForClient {
+        $id =~ s/://g;
 
- 	return Slim::Utils::Misc::fileURLFromPath(
--		catfile(Slim::Utils::OSDetect::dirsFor('prefs'), "clientplaylist_$id.m3u")
-+		catfile(Slim::Utils::OSDetect::dirsFor('ClientPlaylists'), "clientplaylist_$id.m3u")
- 	);
+        return Slim::Utils::Misc::fileURLFromPath(
+-               catfile(scalar Slim::Utils::OSDetect::dirsFor('prefs'), "client>
++               catfile(Slim::Utils::OSDetect::dirsFor('ClientPlaylists'), "cli>
+        );
  }
