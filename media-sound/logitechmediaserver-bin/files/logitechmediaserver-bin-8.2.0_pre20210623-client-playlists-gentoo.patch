@@ -1,5 +1,7 @@
---- Slim/Player/Playlist.pm.orig	2012-05-29 13:43:52.000000000 +0100
-+++ Slim/Player/Playlist.pm	2012-05-29 13:43:52.000000000 +0100
+diff --git a/Playlist.pm b/Playlist1.pm
+index f45a577..e3ff25c 100644
+--- a/Slim/Player/Playlist.pm.orig
++++ b/Slim/Player/Playlist.pm
 @@ -1189,7 +1189,7 @@ sub _playlistUrlForClient {
         $id =~ s/://g;
 
