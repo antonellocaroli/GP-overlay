@@ -5,6 +5,6 @@
 
         return Slim::Utils::Misc::fileURLFromPath(
 -               catfile(scalar Slim::Utils::OSDetect::dirsFor('prefs'), "clientplaylist_$id.m3u")
-+               catfile(scalar Slim::Utils::OSDetect::dirsFor('ClientPlaylists'), "clientplaylist_$id.m3u>
++               catfile(scalar Slim::Utils::OSDetect::dirsFor('ClientPlaylists'), "clientplaylist_$id.m3u")
         );
  }
