@@ -1,10 +1,10 @@
---- a/Slim/Player/Playlist.pm   2012-05-29 13:43:52.000000000 +0100
-+++ b/Slim/Player/Playlist.pm   2012-05-29 13:43:52.000000000 +0100
+--- a/Slim/Player/Playlist.pm	2012-05-29 13:43:52.000000000 +0100
++++ b/Slim/Player/Playlist.pm	2012-05-29 13:43:52.000000000 +0100
 @@ -1124,7 +1124,7 @@
-        $id =~ s/://g;
+ 	$id =~ s/://g;
 
-        return Slim::Utils::Misc::fileURLFromPath(
--               catfile(scalar Slim::Utils::OSDetect::dirsFor('prefs'), "clientplaylist_$id.m3u")
-+               catfile(scalar Slim::Utils::OSDetect::dirsFor('ClientPlaylists'), "clientplaylist_$id.m3u")
-        );
+ 	return Slim::Utils::Misc::fileURLFromPath(
+-		catfile(scalar Slim::Utils::OSDetect::dirsFor('prefs'), "clientplaylist_$id.m3u")
++		catfile(scalar Slim::Utils::OSDetect::dirsFor('ClientPlaylists'), "clientplaylist_$id.m3u")
+ 	);
  }
