@@ -33,6 +33,13 @@ src_unpack() {
 	unpack openhome-sc2-${openhome_packageversion}.tar.gz
 }
 
+src_prepare() {
+	cd "${WORKDIR}" || die "Couldn't cd to WORKDIR"
+	eapply "${FILESDIR}/${P}-python.patch"
+	eapply "${FILESDIR}/${P}-werror.patch"
+	eapply_user
+}
+
 src_configure() {
 	econf "--with-openhome=${WORKDIR}/openhome"
 }
