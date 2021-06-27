@@ -6,7 +6,7 @@ EAPI=7
 DESCRIPTION="Implements the SongCast protocol for use by upmpdcli and mpd"
 HOMEPAGE="https://www.lesbonscomptes.com/upmpdcli/index.html"
 
-openhome_packageversion="20210305"
+openhome_packageversion="20210627"
 
 SRC_URI="
 	https://www.lesbonscomptes.com/upmpdcli/downloads/${P}.tar.gz
