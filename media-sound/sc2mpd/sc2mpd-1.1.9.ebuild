@@ -15,7 +15,7 @@ SRC_URI="
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86 arm64"
+KEYWORDS="amd64 arm64"
 
 DEPEND="
 	dev-libs/expat
@@ -47,7 +47,12 @@ src_compile() {
 	# build_ohNetGenerated
 	cd "${WORKDIR}/openhome/ohNetGenerated" || die "Couldn't cd to ohNetGenerated dir"
 	# TODO: get from environment/make target
-	deps="${WORKDIR}/openhome/ohNetGenerated/dependencies/Linux-x64/ohNet-Linux-x64-Release"
+	if use amd64 ; then
+	   deps="${WORKDIR}/openhome/ohNetGenerated/dependencies/Linux-x64/ohNet-Linux-x64-Release"
+   else
+		 deps="${WORKDIR}/openhome/ohNetGenerated/dependencies/Linux-arm64/ohNet-Linux-arm64-Release"
+	fi
+	#deps="${WORKDIR}/openhome/ohNetGenerated/dependencies/Linux-x64/ohNet-Linux-x64-Release"
 	mkdir -p ${deps}/{include/ohnet,lib/{ohnet,t4,ui,PyOhNet}} || die "Couldn't mkdir deps"
 	cd ${deps} || die "Couldn't cd to deps dir"
 
