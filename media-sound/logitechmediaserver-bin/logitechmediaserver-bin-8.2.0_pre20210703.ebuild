@@ -10,11 +10,10 @@ MY_PN="${PN/-bin}"
 
 PERL_VER="5.30"
 if [[ ${PV} == *_pre* ]] ; then
-	HASHID="6f600898d33a631c71ca91e29d4b4b752598a76c"
-	BUILDID="1624352228"
+	HASHID="100d43c0c0097bee4fa7fb5f4678d95ec2615aeb"
+	BUILDID="1625235757"
 	MY_PV="${PV/_pre*}"
 	SRC_URI="http://downloads-origin.slimdevices.com/nightly/8.2/lms/${HASHID}/${MY_PN}-${MY_PV}-${BUILDID}.tgz"
-#	SRC_URI="https://www.dropbox.com/s/ghkkob0aw3nfyug/${MY_PN}-${MY_PV}-${BUILDID}.tgz"
 	S="${WORKDIR}/${MY_PN}-${MY_PV}-${BUILDID}"
 	KEYWORDS="~amd64 ~arm64 ~arm"
 elif [[ ${PV} == "9999" ]] ; then
