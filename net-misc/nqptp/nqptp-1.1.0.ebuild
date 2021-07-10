@@ -5,7 +5,7 @@ EAPI=7
 
 inherit eutils user git-r3
 
-MY_PN="shairport-sync"
+MY_PN="nqptp"
 
 DESCRIPTION="nqptp is a daemon that monitors timing data from any PTP clocks"
 HOMEPAGE="https://github.com/mikebrady/nqptp"
@@ -20,6 +20,8 @@ KEYWORDS="amd64 arm64"
 
 DEPEND=""
 RDEPEND="${DEPEND}"
+
+S="${WORKDIR}/${MY_PN}"
 
 src_compile() {
         default
