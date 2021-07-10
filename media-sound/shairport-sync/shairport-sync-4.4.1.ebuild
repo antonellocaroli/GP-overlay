@@ -9,13 +9,13 @@ MY_PN="shairport-sync"
 
 DESCRIPTION="Shairport Sync is an AirPlay audio player"
 HOMEPAGE="https://github.com/mikebrady/shairport-sync"
-#EGIT_REPO_URI="https://github.com/mikebrady/shairport-sync.git"
-#EGIT_COMMIT="dda615975de21abec41140923a58f9bc2ec79601"
+EGIT_REPO_URI="https://github.com/mikebrady/shairport-sync.git
+https://github.com/mikebrady/nqptp.git"
+EGIT_COMMIT="dda615975de21abec41140923a58f9bc2ec79601
+2caa1944ca44a5a365b5904f82038a9425c755b8"
 #EGIT_REPO_URI="https://github.com/mikebrady/nqptp.git"
 #EGIT_COMMIT="2caa1944ca44a5a365b5904f82038a9425c755b8"
-SRC_URI="https://github.com/mikebrady/shairport-sync.git
-https://github.com/mikebrady/nqptp.git
-"
+
 
 
 LICENSE="GPL-2"
