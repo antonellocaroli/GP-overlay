@@ -21,8 +21,6 @@ KEYWORDS="amd64 arm64"
 DEPEND=""
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}/${MY_PN}-${PV}"
-
 src_compile() {
         default
         autoreconf -fi
