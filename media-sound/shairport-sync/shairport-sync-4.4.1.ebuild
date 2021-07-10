@@ -29,7 +29,7 @@ DEPEND="dev-libs/openssl
 RDEPEND="${DEPEND}
 	net-dns/avahi"
 
-S="${WORKDIR}/${MY_PN}"
+#S="${WORKDIR}/${MY_PN}"
 
 pkg_setup() {
 	enewuser shairport-sync -1 -1 -1 audio
