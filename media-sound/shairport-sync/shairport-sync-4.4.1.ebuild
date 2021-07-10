@@ -10,8 +10,8 @@ MY_PN="shairport-sync"
 DESCRIPTION="Shairport Sync is an AirPlay audio player"
 HOMEPAGE="https://github.com/mikebrady/shairport-sync"
 SRC_URI="
-	https://github.com/antonellocaroli/shairport/releases/download/4.4.1/shairport-sync-master.zip
-	https://github.com/antonellocaroli/shairport/releases/download/1.1.0/nqptp-main.zip
+	https://github.com/antonellocaroli/shairport/releases/download/4.4.1/shairport-sync.zip
+	https://github.com/antonellocaroli/shairport/releases/download/1.1.0/nqptp.zip
 "
 
 
