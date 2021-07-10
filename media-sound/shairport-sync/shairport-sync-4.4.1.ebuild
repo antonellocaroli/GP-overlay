@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit eutils user git-r3
+inherit eutils user
 
 MY_PN="shairport-sync"
 
