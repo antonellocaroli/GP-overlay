@@ -26,7 +26,11 @@ DEPEND="dev-libs/openssl
 	media-libs/soxr
 	dev-libs/libconfig
 	dev-libs/libdaemon
-	convolution? ( media-libs/libsndfile )"
+	convolution? ( media-libs/libsndfile )
+	ap2? ( app-pda/libplist )
+	ap2? ( dev-util/xxd )
+	ap2? ( dev-libs/libsodium )
+	ap2? ( app-doc/xmltoman )"
 RDEPEND="${DEPEND}
 	net-dns/avahi"
 
@@ -40,9 +44,17 @@ src_compile() {
         #default
         autoreconf -fi
 				if use convolution; then
-					./configure --sysconfdir=/etc --with-alsa --with-soxr --with-avahi --with-ssl=openssl --with-libdaemon --with-convolution --with-airplay-2
+				    if use ap2; then
+					    ./configure --sysconfdir=/etc --with-alsa --with-soxr --with-avahi --with-ssl=openssl --with-libdaemon --with-convolution --with-airplay-2
+						else
+						  ./configure --sysconfdir=/etc --with-alsa --with-soxr --with-avahi --with-ssl=openssl --with-libdaemon --with-convolution
+						fi
 				else
-				  ./configure --sysconfdir=/etc --with-alsa --with-soxr --with-avahi --with-ssl=openssl --with-libdaemon --with-airplay-2
+				    if use ap2; then
+				     ./configure --sysconfdir=/etc --with-alsa --with-soxr --with-avahi --with-ssl=openssl --with-libdaemon --with-airplay-2
+						else
+						 ./configure --sysconfdir=/etc --with-alsa --with-soxr --with-avahi --with-ssl=openssl --with-libdaemon
+					  fi
 				fi
 				make
 }
