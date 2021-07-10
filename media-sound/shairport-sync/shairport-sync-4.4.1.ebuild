@@ -40,9 +40,9 @@ src_compile() {
         default
         autoreconf -fi
 				if use convolution; then
-					./configure --sysconfdir=/etc --with-alsa --with-soxr --with-avahi --with-ssl=openssl --with-libdaemon --with-convolution
+					./configure --sysconfdir=/etc --with-alsa --with-soxr --with-avahi --with-ssl=openssl --with-libdaemon --with-convolution --with-airplay-2
 				else
-				  ./configure --sysconfdir=/etc --with-alsa --with-soxr --with-avahi --with-ssl=openssl --with-libdaemon
+				  ./configure --sysconfdir=/etc --with-alsa --with-soxr --with-avahi --with-ssl=openssl --with-libdaemon --with-airplay-2
 				fi
 				make
 }
