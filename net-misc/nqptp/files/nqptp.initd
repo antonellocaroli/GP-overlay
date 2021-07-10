@@ -1,0 +1,25 @@
+#!/sbin/openrc-run
+
+
+user="root"
+
+description="daemon that monitors timing data from any PTP clocks"
+start_stop_daemon_args="--user $user"
+
+command="/usr/local/bin/nqptp"
+
+
+command_background=yes
+pidfile=/run/nqptp.pid
+
+depend() {
+    need localmount
+    after bootmisc net*
+}
+
+stop() {
+    ebegin "Stopping nqptp"
+    start-stop-daemon --stop --quiet \
+        --exec /usr/local/bin/nqptp
+    eend $?
+}
