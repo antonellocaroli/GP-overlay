@@ -23,6 +23,10 @@ RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_PN}"
 
+PATCHES=(
+	"${FILESDIR}/make.patch"
+)
+
 src_compile() {
         default
         autoreconf -fi
