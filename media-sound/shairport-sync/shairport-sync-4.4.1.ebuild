@@ -37,7 +37,7 @@ pkg_setup() {
 }
 
 src_compile() {
-        default
+        #default
         autoreconf -fi
 				if use convolution; then
 					./configure --sysconfdir=/etc --with-alsa --with-soxr --with-avahi --with-ssl=openssl --with-libdaemon --with-convolution --with-airplay-2
