@@ -21,14 +21,14 @@ KEYWORDS="amd64 arm64"
 DEPEND=""
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}/${MY_PN}"
+#S="${WORKDIR}/${MY_PN}"
 
 PATCHES=(
 	"${FILESDIR}/make.patch"
 )
 
 src_compile() {
-        default
+        #default
         autoreconf -fi
 				./configure
 				make
