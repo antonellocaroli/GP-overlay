@@ -9,10 +9,10 @@ MY_PN="nqptp"
 
 DESCRIPTION="nqptp is a daemon that monitors timing data from any PTP clocks"
 HOMEPAGE="https://github.com/mikebrady/nqptp"
-#EGIT_REPO_URI="https://github.com/antonellocaroli/nqptp.git"
-#EGIT_COMMIT="f777d7297b7587d4eea2948a887ce203a9b1fc57"
-EGIT_REPO_URI="https://github.com/mikebrady/nqptp.git"
-EGIT_COMMIT="2caa1944ca44a5a365b5904f82038a9425c755b8"
+EGIT_REPO_URI="https://github.com/antonellocaroli/nqptp.git"
+EGIT_COMMIT="f777d7297b7587d4eea2948a887ce203a9b1fc57"
+#EGIT_REPO_URI="https://github.com/mikebrady/nqptp.git"
+#EGIT_COMMIT="2caa1944ca44a5a365b5904f82038a9425c755b8"
 
 
 LICENSE="GPL-2"
@@ -23,9 +23,9 @@ KEYWORDS="amd64 arm64"
 DEPEND=""
 RDEPEND="${DEPEND}"
 
-PATCHES=(
-	"${FILESDIR}/make.patch"
-)
+#PATCHES=(
+#	"${FILESDIR}/make.patch"
+#)
 
 #S="${WORKDIR}/${MY_PN}"
 
