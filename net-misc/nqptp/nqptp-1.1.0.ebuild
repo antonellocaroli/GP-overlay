@@ -30,8 +30,8 @@ PATCHES=(
 src_compile() {
         #default
         autoreconf -fi
-				./configure
-				make
+        ./configure
+        make
 }
 
 src_install() {
