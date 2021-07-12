@@ -1,11 +1,9 @@
-diff --git a/Makefile.am b/Makefile.am
-index f89c45d..c815e38 100644
 --- a/Makefile.am
 +++ b/Makefile.am
 @@ -20,7 +20,6 @@ endif
  install-exec-hook:
  if BUILD_FOR_LINUX
-        [ -e /lib/systemd/system ] || mkdir -p /lib/systemd/system
--       cp nqptp.service /lib/systemd/system
+ 	[ -e /lib/systemd/system ] || mkdir -p /lib/systemd/system
+-	cp nqptp.service /lib/systemd/system
  endif
   # no installer for FreeBSD yet

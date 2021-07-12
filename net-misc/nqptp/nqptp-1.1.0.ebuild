@@ -23,9 +23,9 @@ KEYWORDS="amd64 arm64"
 DEPEND=""
 RDEPEND="${DEPEND}"
 
-#PATCHES=(
-#	"${FILESDIR}/make.patch"
-#)
+PATCHES=(
+	"${FILESDIR}/make.patch"
+)
 
 #S="${WORKDIR}/${MY_PN}"
 
